@@ -20,6 +20,11 @@ Author:
 
 params ["_oldUnit",'_killer'];
 
+// gun fix
+//_oldUnit setVariable ['unit_revive_lastGun',primaryWeapon _oldUnit];
+_oldUnit setVariable ['unit_revive_oldLoadoutKilled',getUnitLoadout _oldUnit,true];
+
+
 // exit if player on foot
 if (isNull objectParent _oldUnit) exitWith {};
 

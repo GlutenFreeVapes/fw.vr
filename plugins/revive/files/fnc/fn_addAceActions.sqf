@@ -23,6 +23,22 @@ _revive = [
 	"Revive Player",
 	"",
 	{
+
+		private _nearUnits = _unit nearEntities ['CaManBase',50];
+
+		private _isEnemyNear = _nearUnits findIf {
+			(!isNull _x) && {	// is not null
+				(alive _x) && 	// is alive
+				(((side (group _x)) getFriend (side (group player))) < 0.6) &&		//is not friendly to the player group
+				!((weapons _x) isEqualTo [])	// has weapons
+			};
+		};
+		if (_isEnemyNear != -1) exitWith {
+			systemChat 'Cannot revive, enemy nearby';
+		};
+
+
+
 		private _item = 'ACE_personalAidKit';
 
 		// array of units to check for items

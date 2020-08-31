@@ -36,7 +36,7 @@ if (_sinceLastShotAt < 15) exitWith {
 	systemChat 'You are under fire. You cannot revive under fire.';
 };
 
-private _nearUnits = _unit nearEntities ['CaManBase',100];
+private _nearUnits = _unit nearEntities ['CaManBase',5];
 
 private _isEnemyNear = _nearUnits findIf {
 	(!isNull _x) && {	// is not null
@@ -53,6 +53,11 @@ if (_isEnemyNear != -1) exitWith {
 _newUnit setVariable ['unit_revive_isRevived',true,true];
 [_newUnit] spawn {
 	_this call respawn_fnc_respawn;
+};
+
+if (!(_unit getVariable ['unit_revive_lastGun',''] isEqualTo '')) then {
+	//[_newUnit,(_unit getVariable ['unit_revive_lastGun',''])] remoteExec ['addWeapon',_newUnit];
+	//systemChat str (_unit getVariable ['unit_revive_lastGun','']);
 };
 
 'You have been revived, stay alive for 5 minutes to be revived again.' remoteExec ['systemChat',_newUnit];

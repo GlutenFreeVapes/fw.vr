@@ -38,6 +38,7 @@ if (_loadOut isEqualTo []) then {
 	_loadOut = _oldUnit getVariable ['unit_revive_oldLoadout',[]];
 };
 player setUnitLoadout _loadOut;
+//player setUnitLoadout (_oldUnit getVariable ['unit_revive_oldLoadout',(getUnitLoadout _oldUnit)]);
 
 // wait for player to be unconscious and then respawn him
 [_oldUnit] spawn {

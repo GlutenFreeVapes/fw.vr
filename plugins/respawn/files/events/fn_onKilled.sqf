@@ -31,3 +31,4 @@ _oldUnit setVariable ["unit_respawn_dead",true,true];
 
 // Run onKilled scripts
 [_oldUnit,_killer,_respawn,_respawnDelay] call respawn_fnc_runOnKilledScripts;
+//systemChat str _oldUnit;

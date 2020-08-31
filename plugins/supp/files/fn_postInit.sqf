@@ -16,6 +16,10 @@ Author:
 ---------------------------------------------------------------------------- */
 #include "script_component.cpp"
 
+//laxemann_l_Suppress_enabled = false;
+L_Suppress_Suppress_Sys_enabled = false;
+L_Suppress_Suppress_Sys_fnc_fired = {};
+
 if (!(hasInterface) || isDedicated) exitWith {supp_fnc_fired = {}};
 
 // Color Correction
@@ -104,7 +108,7 @@ a2k_hitBlur = {
     if (alive player) then {
         //if !(isNull objectParent player) exitWith {};
 
-        if (random 1 > 0.9) then {
+        if (random 1 > 0.95) then {
             private _safeWeapons = player getVariable ['ace_safemode_safedWeapons',[]];
             if ((currentWeapon player) in _safeWeapons) exitWith {};
 

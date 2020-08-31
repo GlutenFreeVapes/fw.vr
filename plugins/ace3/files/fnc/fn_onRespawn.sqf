@@ -65,7 +65,15 @@ call {
 			};
 		};
 
-		_text = format ["<t size='2' shadow='2' color='#FFFF00'>%1 killed you with %2 from %3m</t>",_name,_weapon,round(_killer distance _oldUnit)];
+
+		_text = format ["<t size='2' shadow='2' color='#FFFF00'>%1 killed you with %2</t>",_name,_weapon];
+
+		if (isNull _killer) then {
+			_text = "<t size='2' shadow='2' color='#FFFF00'>DEATH!</t>";
+		};
+
+		private _str = 'old: ' + str _oldUnit + ' new: ' + str _newUnit + " killer: " + str _killer + ' dist: ' + str round(_killer distance _oldUnit);
+		//systemChat _str;
 	};
 
 };

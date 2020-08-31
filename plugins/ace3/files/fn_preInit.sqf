@@ -36,6 +36,11 @@ if !(_enabled) exitWith {};
 
 //ACE 3 Medical ================================================================
 
+// hearing
+["ace_hearing_enableCombatDeafness", false, true, _source, false] call CBA_settings_fnc_set;
+["ace_hearing_disableEarRinging", true, true, _source, false] call CBA_settings_fnc_set;
+["ace_hearing_earplugsVolume", 0.5, true, _source, false] call CBA_settings_fnc_set;
+
 ["ace_medical_AIDamageThreshold", ACE3_SETTINGS_AI_HEALTH, true, _source, false] call CBA_settings_fnc_set;
 ["ace_medical_bleedingcoefficient", ACE3_SETTINGS_MED_BLEED, true, _source, false] call CBA_settings_fnc_set;
 ["ace_medical_blood_bloodLifetime", ACE3_SETTINGS_MED_BLEED, true, _source, false] call CBA_settings_fnc_set;
@@ -45,7 +50,7 @@ if !(_enabled) exitWith {};
 ["ace_medical_fractureChance", 0.4, true, _source, false] call CBA_settings_fnc_set;
 ["ace_medical_fractures", 0, true, _source, false] call CBA_settings_fnc_set;
 //["ace_medical_gui_enableMedicalMenu", 1, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_ivFlowRate", 10, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_ivFlowRate", 15, true, _source, false] call CBA_settings_fnc_set;
 ["ace_medical_limping", 1, true, _source, false] call CBA_settings_fnc_set;
 ["ace_medical_painCoefficient", ACE3_SETTINGS_MED_PAIN, true, _source, false] call CBA_settings_fnc_set;
 ["ace_medical_playerDamageThreshold", (missionNamespace getVariable ["mission_ace3_med_player_health",ACE3_PARAM_MED_PLAYER_HEALTH]), true, _source, false] call CBA_settings_fnc_set;
@@ -67,7 +72,7 @@ if !(_enabled) exitWith {};
 ["ace_medical_treatment_allowSelfStitch", 1, true, _source, false] call CBA_settings_fnc_set;
 ["ace_medical_treatment_allowSharedEquipment", 1, true, _source, false] call CBA_settings_fnc_set;
 
-["ace_medical_treatment_clearTraumaAfterBandage", false, true, _source, false] call CBA_settings_fnc_set;//ACE3_SETTINGS_ADV_HITPOINTS
+["ace_medical_treatment_clearTraumaAfterBandage", true, true, _source, false] call CBA_settings_fnc_set;//ACE3_SETTINGS_ADV_HITPOINTS
 ["ace_medical_treatment_consumePAK", ACE3_SETTINGS_ADV_PAK_CONSUME, true, _source, false] call CBA_settings_fnc_set;
 ["ace_medical_treatment_consumeSurgicalKit", 0, true, _source, false] call CBA_settings_fnc_set;
 ["ace_medical_treatment_convertItems", 1, true, _source, false] call CBA_settings_fnc_set;
@@ -85,7 +90,7 @@ if !(_enabled) exitWith {};
 ["ace_medical_treatment_medicIV", 0, true, _source, false] call CBA_settings_fnc_set;
 ["ace_medical_treatment_medicPAK", 1, true, _source, false] call CBA_settings_fnc_set;
 ["ace_medical_treatment_medicSurgicalKit", 1, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_treatment_timeCoefficientPAK", 1, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_timeCoefficientPAK", 0.5, true, _source, false] call CBA_settings_fnc_set;
 ["ace_medical_treatment_woundReopenChance", 1, true, _source, false] call CBA_settings_fnc_set;
 
 //ACE 3 Captives ===============================================================
@@ -95,11 +100,6 @@ if !(_enabled) exitWith {};
 ["ace_captives_requireSurrender", 2, true, _source, false] call CBA_settings_fnc_set;
 
 //ACE 3 Varius other settigns ==================================================
-
-// hearing
-["ace_hearing_enableCombatDeafness", false, true, _source, false] call CBA_settings_fnc_set;
-["ace_hearing_disableEarRinging", true, true, _source, false] call CBA_settings_fnc_set;
-["ace_hearing_earplugsVolume", 0.5, true, _source, false] call CBA_settings_fnc_set;
 
 // fatiuge
 ["ace_advanced_fatigue_enabled", false, true, _source, false] call CBA_settings_fnc_set;

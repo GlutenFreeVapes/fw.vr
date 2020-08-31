@@ -18,12 +18,12 @@
 //#define ACE3_SETTINGS_REVIVE_TIME		601		//seconds, time until death
 //#define ACE3_SETTINGS_REVIVE_LIVES		1		//revive system lives <<< not available
 // MEDICAL PARAMS
-#define ACE3_PARAM_MED_EVERYONE_MEDIC	1		//1 for everyone is a medic (can pak)
+#define ACE3_PARAM_MED_EVERYONE_MEDIC	0		//1 for everyone is a medic (can pak)
 //#define ACE3_PARAM_MED_LEVEL 			1		//1 - basic/2 - advanced (PARAM)
 #define ACE3_PARAM_MED_PLAYER_HEALTH	3		//Player health (PARAM)
 //#define ACE3_PARAM_MED_INSTADEATH		1		//1 == true, enable instedeath
 // MEDICAL
-#define ACE3_SETTINGS_AI_HEALTH			1		//ai health
+#define ACE3_SETTINGS_AI_HEALTH			2		//ai health
 //#define ACE3_SETTINGS_AI_UNCON			1		//Allow ai unconciousness (1 allowed/0 not allowed)
 #define ACE3_SETTINGS_MED_BLEED			0.75	//Bleeding coef. (lower than 1 to bleed slower)
 #define ACE3_SETTINGS_MED_PAIN			1		//Pain coef. (lower than 1 for less pain)

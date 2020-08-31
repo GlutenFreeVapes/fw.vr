@@ -48,7 +48,7 @@ _revive_deadHandle = [] spawn {
 
 					// If menu exists, open it, if it does not, close it!
 					if (findDisplay 304000 isEqualTo displayNull) then {
-						call menus_fnc_menusOpen;
+						//call menus_fnc_menusOpen;
 					} else {
 						[304000] call menus_fnc_displayCloser;
 					};
@@ -70,7 +70,7 @@ _revive_deadHandle = [] spawn {
 		if (_toWaveComplete <= 0) then {
 
 			// open mission menu
-			call menus_fnc_menusOpen;
+			//call menus_fnc_menusOpen;
 			call revive_fnc_menu;
 
 			player setVariable ['unit_revive_canRespawn',true];

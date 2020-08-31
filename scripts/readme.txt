@@ -1,0 +1,1 @@
+This folder will contain various useful and random scripts that should mostly be just copy pasted into the init.

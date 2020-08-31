@@ -61,7 +61,7 @@ if (hasInterface) then {
 
 	// add menu for respawning when player is dead and allowed to respawn
 	if ("menus" in mission_plugins) then {
-		[["Revive Plugin","call revive_fnc_menu",[{(player getVariable ['unit_revive_canRespawn',false])},{false}],false],[player]] call menus_fnc_registerItem;
+		// [["Revive Plugin","call revive_fnc_menu",[{(player getVariable ['unit_revive_canRespawn',false])},{false}],false],[player]] call menus_fnc_registerItem;
 	};
 };
 
