@@ -120,7 +120,7 @@ if (_buildings isEqualTo []) then {
 	_buildings = nearestTerrainObjects [[worldSize / 2,worldSize / 2],['BUILDING','HOUSE','CHURCH','CHAPEL','BUNKER','FORTRESS','VIEW-TOWER','LIGHTHOUSE','FUELSTATION','HOSPITAL','BUSSTOP','RUIN','TOURISM','WATERTOWER'],worldSize];
 	_buildings append (allMissionObjects 'Building');
 
-	_buildings = _buildings inAreaArray 'LOOT_AREA';
+	//_buildings = _buildings inAreaArray 'LOOT_AREA';
 
 	// filter to only buildings with buildingpositions
 	_buildings = _buildings select {
@@ -140,10 +140,12 @@ if (_buildings isEqualTo []) then {
 			if (_class find 'village' > -1) exitWith {'residential'};
 			if (_class find 'commercial' > -1) exitWith {'residential'};
 			if (_class find 'cultural' > -1) exitWith {'residential'};
+			if (_class find 'slum' > -1) exitWith {'residential'};
 
 			if (_class find 'infrastructure' > -1) exitWith {'industrial'};
 			if (_class find 'industrial' > -1) exitWith {'industrial'};
 			if (_class find 'sports' > -1) exitWith {'industrial'};
+			if (_class find 'ruins' > -1) exitWith {'industrial'};
 
 			if (_class find 'military' > -1) exitWith {'military'};
 			'default'

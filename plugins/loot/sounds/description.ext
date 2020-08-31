@@ -1,0 +1,29 @@
+
+class CfgSounds
+{
+
+    class open_1
+    {
+        name = "open crate 1";
+        sound[] = {"open_1.ogg", 5,1,5};
+        titles[] = {};
+    };
+    class open_2
+    {
+        name = "open crate 2";
+        sound[] = {"open_2.ogg", 5,1,5};
+        titles[] = {};
+    };
+    class open_3
+    {
+        name = "open crate 3";
+        sound[] = {"open_3.ogg", 5,1,5};
+        titles[] = {};
+    };
+    class open_fast
+    {
+        name = "open crate fast";
+        sound[] = {"open_fast.ogg", 5,1,5};
+        titles[] = {};
+    };
+};

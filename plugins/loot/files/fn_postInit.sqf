@@ -60,11 +60,11 @@ if (hasInterface) then {
 			//[_target,['alarm_blufor',1500]] remoteExec ['say3D',-2];
 			//call ten_fnc_hordeSpawn;
 
-			private _oldTime = _target getVariable ['ten_radio_timeLeft',7];
+			private _oldTime = _target getVariable ['ten_radio_timeLeft',3];
 			private _type = 'normal';
 			// ([_x,(_cachedArr select _forEachIndex)] call loot_fnc_create);
 			if ('Toolkit' in (items player)) then {
-				_oldTime = 2;
+				_oldTime = 0.5;
 				_type = 'fast';
 			};
 
@@ -77,7 +77,7 @@ if (hasInterface) then {
 			// plays different sound if opened with a toolkit
 
 			// execute sound playback from servers
-			[{
+			[[player,_target,_type],{
 				params [['_player',objNull],['_object',objNull],['_type','normal']];
 				if (isNull _object) exitWith {};
 				// create an invisible object to play the sound from
@@ -115,7 +115,7 @@ if (hasInterface) then {
 
 				// send the player the pad of the sound
 				_player setVariable ['unit_loot_currentlyOpeningSoundSource',_pad,true];
-			},[player,_target,_type]] remoteExec ['call',2];
+			}] remoteExec ['call',2];
 
 			// progress bar
 			[_oldTime, [_target], {

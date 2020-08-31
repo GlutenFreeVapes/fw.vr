@@ -40,6 +40,10 @@ if (_holderArr isEqualTo []) then {
 	_holderArr = _holderArr apply {objNull};
 };
 
+
+// todo add per house variable
+
+
 // loop through all positions
 {
 	//private _loot = ([_x,(_cachedArr select _forEachIndex)] call loot_fnc_create);

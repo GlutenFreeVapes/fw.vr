@@ -21,8 +21,6 @@ Author:
 
 params [['_lootCat','default']];
 
-// todo add per house variable
-
 // here test test test
 private _priority = 3;
 
@@ -35,57 +33,66 @@ if (_lootTables isEqualTo []) then {
 		// military
 		[
 			// items
-			['item',[5,0.5,5,4],'H_HelmetHBK_headset_F'],
-			['item',[3,0.25,5,4],'H_HelmetAggressor_F'],
+			['item',[5,0.5,5,4],'rhs_altyn'],
+			['item',[3,0.25,5,4],'rhsusf_ANPVS_14'],
 			['item',[5,0.27,5,3],'ACE_NVG_Gen1'],
-			['item',[30,0.4,3,4],'H_HelmetSpecB_wdl'],
-			['item',[1,0.35,4,4],'H_Hat_Tinfoil_F'],
-			['item',[30,0.7,3,4],'H_Booniehat_wdl'],
+			['item',[30,0.4,3,4],'rhs_ssh68'],
+			['item',[30,0.3,4,4],'rhssaf_helmet_m97_black_nocamo'],
+			['item',[30,0.7,3,4],'rhssaf_helmet_m59_85_nocamo'],
 
-			['item',[25,0.35,5,12],'V_SmershVest_01_F'],
-			['item',[20,0.3,5,12],'V_CarrierRigKBT_01_heavy_EAF_F'],
-			['item',[25,0.4,5,9],'V_PlateCarrierSpec_wdl'],
-			['item',[25,0.3,5,12],'V_CarrierRigKBT_01_light_EAF_F'],
-			['item',[25,0.4,5,9],'V_PlateCarrier1_wdl'],
-			['item',[25,0.2,5,13],'V_CarrierRigKBT_01_EAF_F'],
-			['item',[30,0.2,2,12],'V_CarrierRigKBT_01_Olive_F'],
+			['item',[25,0.35,5,12],'rhssaf_vest_md12_digital_desert'],
+			['item',[20,0.3,5,12],'rhs_6b13_6sh92_vog'],
+			['item',[25,0.4,5,9],'rhssaf_vest_md98_rifleman'],
+			['item',[25,0.3,5,12],'rhsgref_6b23_ttsko_digi_rifleman'],
+			['item',[25,0.4,5,9],'rhs_6b23_vydra_3m'],
+			['item',[25,0.2,5,13],'rhs_6b13_EMR'],
+			['item',[30,0.2,2,12],'rhs_6b5_medic_khaki'],
 
 
 			['mag',[30,0.5,5,3],'rhs_mag_m67'],
-			['item',[5,0.6,5,5],'APERSTripMine_Wire_Mag'],
-			['item',[10,0.6,5,5],'DemoCharge_Remote_Mag'],
-			['item',[50,0.7,5,2],'acc_flashlight'],
-			['item',[50,0.7,5,2],'optic_arco_ak_blk_f'],
-			['item',[50,0.7,5,2],'optic_holosight_blk_f'],
+			['item',[10,0.6,5,5],'APERSTripMine_Wire_Mag'],
+			['item',[15,0.6,5,5],'DemoCharge_Remote_Mag'],
+			['item',[50,0.7,5,2],'rhs_acc_2dpZenit'],
+			['item',[50,0.7,5,2],'rhs_acc_pkas'],
 			['item',[150,0.8,6,1],'ACE_fieldDressing'],
 			['item',[150,0.8,7,1],'ACE_morphine'],
 			['item',[150,0.8,8,1],'ACE_epinephrine'],
 
 			// magazines
-			['mag',[150,0.7,8,2],'30Rnd_762x39_AK12_Mag_F'],
-			['mag',[100,0.6,5,2],'1Rnd_HE_Grenade_shell'],
-			['mag',[100,0.5,5,2],'6Rnd_12Gauge_Pellets'],
-			['mag',[200,0.7,8,2],'30rnd_762x39_AK12_Lush_Mag_F'],
-			['mag',[100,0.7,8,2],'30Rnd_65x39_caseless_msbs_mag_Tracer'],
-			['mag',[100,0.7,8,2],'30Rnd_65x39_caseless_msbs_mag'],
-			['mag',[10,0.5,8,3],'75rnd_762x39_AK12_Mag_Tracer_F'],
-			['mag',[3,0.3,5,4],'RPG7_F'],
-			['mag',[10,0.4,8,4],'200Rnd_65x39_cased_Box_Tracer'],
+			['mag',[150,0.7,8,2],'rhs_30Rnd_545x39_AK_green'],
+			['mag',[100,0.6,5,2],'rhs_VOG25'],
+			['mag',[200,0.7,8,2],'hlc_30Rnd_762x39_t_ak'],
+			['mag',[100,0.7,8,2],'hlc_20rnd_762x51_T_G3'],
+			['mag',[10,0.4,8,4],'rhs_100Rnd_762x54mmR_green'],
+			['mag',[30,0.6,8,2],'rhs_mag_30Rnd_556x45_M855A1_Stanag_Tracer_Red'],
+			['mag',[10,0.5,8,3],'hlc_50Rnd_762x51_T_MG3'],
+			['mag',[3,0.3,5,4],'rhs_rpg7_PG7VL_mag'],
+			['mag',[10,0.4,8,4],'150Rnd_762x54_Box_Tracer'],
 
 			// weapons
 			// weapon / weapon mag array / weapon attachment array
-			['kit',[50,0.10,8,7],'arifle_AK12U_F',[['30Rnd_762x39_AK12_Mag_F',2]]],
-			['kit',[25,0.11,5,8],'arifle_AK12_lush_F',[['30rnd_762x39_AK12_Lush_Mag_F']],['acc_flashlight']],
-			['kit',[30,0.13,6,8],'arifle_MSBS65_F',[['30Rnd_65x39_caseless_msbs_mag_Tracer',2]]],
-			['kit',[5,0.09,7,9],'arifle_MSBS65_GL_F',[['30Rnd_65x39_caseless_msbs_mag'],['1Rnd_HE_Grenade_shell',3]]],
-			['kit',[5,0.09,6,9],'arifle_MSBS65_UBS_camo_F',[['30Rnd_65x39_caseless_msbs_mag'],['6Rnd_12Gauge_Pellets',3]]],
-			['kit',[1,0.04,5,15],"launch_RPG7_F",[["RPG7_F",3]]],
-			['kit',[3,0.07,5,7],'LMG_Mk200_black_F',[['200Rnd_65x39_cased_Box_Tracer']]],
-			['kit',[2,0.06,5,13],"arifle_RPK12_F",[["75rnd_762x39_AK12_Mag_Tracer_F",2],["75rnd_762x39_AK12_Mag_F",1]]],
+			['kit',[50,0.10,8,7],'rhs_weap_akms',[['hlc_30Rnd_762x39_t_ak']]],
+			['kit',[25,0.11,5,8],'rhs_weap_ak104_zenitco01_b33',[['hlc_30Rnd_762x39_t_ak']],['rhs_acc_2dpZenit']],
+			['kit',[50,0.11,8,9],'rhs_weap_akm',[['hlc_30Rnd_762x39_t_ak']],['rhs_acc_2dpZenit']],
+			['kit',[40,0.1,8,8],"rhs_weap_aks74u",[["rhs_30Rnd_545x39_AK_green"]]],
+			['kit',[35,0.12,7,8],"rhs_weap_ak74m_camo",[["rhs_30Rnd_545x39_AK_green"]],['rhs_acc_2dpZenit']],
+			['kit',[35,0.12,7,8],"rhs_weap_ak74m_2mag",[["rhs_30Rnd_545x39_AK_green"]]],
+			['kit',[35,0.12,7,7],"rhs_weap_aks74",[["rhs_30Rnd_545x39_AK_green"]]],
+			['kit',[30,0.13,5,8],'hlc_rifle_g3a3ris',[['hlc_20rnd_762x51_T_G3']]],
+			['kit',[30,0.13,6,8],'hlc_rifle_g3ka4',[['hlc_20rnd_762x51_T_G3']]],
+			['kit',[5,0.09,7,9],'rhs_weap_ak74n_2_gp25',[['rhs_30Rnd_545x39_AK_green'],['rhs_VOG25',3]]],
+			['kit',[5,0.09,6,9],'rhs_weap_akms_gp25',[['hlc_30Rnd_762x39_t_ak'],['rhs_VOG25',3]]],
+			['kit',[2,0.06,5,13],'rhs_weap_pkm',[['rhs_100Rnd_762x54mmR_green',3]]],
+			['kit',[2,0.06,5,13],'LMG_Zafir_F',[['150Rnd_762x54_Box_Tracer',2]],['rhsusf_acc_M952V']],
+			['kit',[3,0.05,5,15],"rhs_weap_M136_hedp"],
+			['kit',[3,0.05,5,15],'rhs_weap_m72a7'],
+			['kit',[1,0.04,5,15],"rhs_weap_rpg7",[["rhs_rpg7_PG7VL_mag",3]]],
+			['kit',[3,0.07,5,7],'rhs_weap_asval',[['rhs_20rnd_9x39mm_SP6']]],
+			['kit',[2,0.06,5,13],"hlc_lmg_MG3",[["hlc_50Rnd_762x51_T_MG3",3],["hlc_250Rnd_762x51_T_MG3",1]]],
 
 			// bags
-			['bag',[50,0.3,4,14],'B_AssaultPack_eaf_F'],
-			['bag',[50,0.3,2,13],'B_Carryall_wdl_F']
+			['bag',[50,0.3,4,14],'rhsusf_assault_eagleaiii_coy'],
+			['bag',[50,0.3,2,13],'rhssaf_alice_smb']
 		],
 
 		// residential
@@ -129,10 +136,12 @@ if (_lootTables isEqualTo []) then {
 			['mag',[250,0.8,2,2],'ACE_HandFlare_Red'],
 			['mag',[250,1.0,3,1],'ACE_Chemlight_HiRed'],
 			['item',[50,0.7,4,2],'ACE_Flashlight_XL50'],
-			['item',[15,0.5,5,5],'DemoCharge_Remote_Mag'],
+			['item',[15,0.6,5,5],'DemoCharge_Remote_Mag'],
+			['item',[50,0.7,5,2],'rhs_acc_2dpZenit'],
+			['item',[50,0.7,5,2],'rhs_acc_pkas'],
 			['item',[50,1.15,5,1],'ACE_CableTie'],
 			['item',[300,0.1,8,1],'ACE_Banana'],
-/*
+
 			// magazines
 			['mag',[250,1.1,3,0.5],'rhsusf_mag_17Rnd_9x19_FMJ'],
 			['mag',[150,0.8,5,2],'hlc_10rnd_12g_buck_S12'],
@@ -145,7 +154,7 @@ if (_lootTables isEqualTo []) then {
 			['kit',[30,0.13,2,8],"rhs_weap_M590_8RD",[["rhsusf_8Rnd_00Buck",8]]],
 			['kit',[50,0.11,5,9],'rhs_weap_akm',[['hlc_30Rnd_762x39_t_ak']],['rhs_acc_2dpZenit']],
 			['kit',[40,0.1,4,8],"rhs_weap_aks74u",[["rhs_30Rnd_545x39_AK_green"]]],
-*/
+
 			// bags
 			['bag',[50,0.5,1,10],'B_AssaultPack_blk'],
 			['bag',[50,0.5,3,10],'B_AssaultPack_mcamo']
@@ -163,16 +172,16 @@ if (_lootTables isEqualTo []) then {
 
 private _lootTable = call {
 	if (_lootCat isEqualTo 'military') exitWith {
-		_priority = 13;
+		_priority = 8;
 		_lootTables # 0
 	};
 	if (_lootCat isEqualTo 'residential') exitWith {
-		_priority = 8;
+		_priority = 4;
 		_lootTables # 1
 
 	};
 	if (_lootCat isEqualTo 'industrial') exitWith {
-		_priority = 5;
+		_priority = 1;
 		_lootTables # 2
 	};
 	_lootTables # 1;
