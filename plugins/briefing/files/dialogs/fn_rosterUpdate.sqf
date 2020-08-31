@@ -168,6 +168,8 @@ private _usedUnits = [];
 						// get role
 						private _role = (getText(_unitCfg >> "Attributes" >> "description"));
 
+
+
 						// get rank
 						private _rank = '<img image="\A3\Ui_f\data\GUI\Cfg\Ranks\private_gs.paa"/>';
 
@@ -209,6 +211,12 @@ private _usedUnits = [];
 				};
 				if (toUpper _role in _aliasAUTO) then {
 					_role = getText (configfile >> "CfgVehicles" >> typeOf _unit >> "displayName");
+				};
+
+				// fix @ symbol from CBA mission names
+				private _indexStrFound = _role find "@";
+				if (_indexStrFound != -1) then {
+					_role = _role select [0,_indexStrFound];
 				};
 
 				private _icons = "";

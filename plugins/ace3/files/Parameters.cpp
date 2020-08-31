@@ -33,6 +33,7 @@ class p_ace3_med_everyone
 	texts[] = {"Disabled","Enabled"};
 	default = ACE3_PARAM_MED_EVERYONE_MEDIC;
 };
+/*
 class p_ace3_med_level
 {
 	title = "          - Medical Simulation level";
@@ -40,12 +41,15 @@ class p_ace3_med_level
 	texts[] = {"Basic","Advanced"};
 	default = ACE3_PARAM_MED_LEVEL;
 };
+*/
 class p_ace3_med_player
 {
 	title = "          - Player health Multiplier";
 	values[] = {0.5,1,2,3,4,5};
 	default = ACE3_PARAM_MED_PLAYER_HEALTH;
 };
+
+/*
 class p_ace3_med_insta
 {
 	title = "          - Instant Death";
@@ -53,6 +57,7 @@ class p_ace3_med_insta
 	texts[] = {"Disabled","Enabled"};
 	default = ACE3_PARAM_MED_INSTADEATH;
 };
+*/
 class p_ace3_0
 {
 	title = "";

@@ -50,4 +50,5 @@ if (!isServer) exitWith {};
 ["ace_cookoff_enableAmmoCookoff", !(missionNamespace getVariable ['mission_cookoff_enabled',COOKOFF_PARAM_ENABLED]), true, "mission", false] call CBA_settings_fnc_set;
 ["ace_cookoff_enable", (missionNamespace getVariable ['mission_cookoff_burn',COOKOFF_PARAM_BURN]), true, "mission", false] call CBA_settings_fnc_set;
 ["ace_cookoff_ammoCookoffDuration", 0.001, true, "mission", false] call CBA_settings_fnc_set;
+["ace_cookoff_enableAmmoBox", false, true, "mission", false] call CBA_settings_fnc_set;
 

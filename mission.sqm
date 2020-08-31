@@ -8,7 +8,7 @@ class EditorData
 	toggles=613;
 	class ItemIDProvider
 	{
-		nextID=1427;
+		nextID=1443;
 	};
 	class MarkerIDProvider
 	{
@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7454.9468,58.355255,7376.0142};
-		dir[]={0.48678356,-0.49250305,0.72154862};
-		up[]={0.27547002,0.87027764,0.40832144};
-		aside[]={0.82903987,-6.2468462e-007,-0.55930305};
+		pos[]={7422.5479,63.683514,7429.3442};
+		dir[]={0.69370329,-0.58026707,0.42697755};
+		up[]={0.4942632,0.81433213,0.30421746};
+		aside[]={0.52421725,-9.2759728e-007,-0.85169542};
 	};
 };
 binarizationWanted=0;
@@ -40,6 +40,7 @@ addons[]=
 	"ace_repair",
 	"A3_Armor_F_Gamma_MBT_01",
 	"A3_Air_F_Heli_Light_01",
+	"ace_nouniformrestrictions",
 	"A3_Air_F_Beta_Heli_Transport_01",
 	"ace_gforces",
 	"ace_parachute",
@@ -49,13 +50,13 @@ addons[]=
 	"A3_Soft_F_Exp_Truck_01",
 	"ace_cargo",
 	"A3_Soft_F_Gamma_Truck_01",
-	"Blastcore_VEP",
 	"ace_rearm",
 	"ace_refuel",
 	"A3_Supplies_F_Exp_Ammoboxes",
 	"ace_dragging",
 	"A3_Weapons_F_Ammoboxes",
 	"A3_Soft_F_Beta_MRAP_03",
+	"itc_land_veh_strider",
 	"A3_Soft_F_Beta_Truck_02",
 	"gordon_reskins_pandur",
 	"A3_Armor_F_Gamma_APC_Wheeled_03",
@@ -78,7 +79,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=32;
+		items=33;
 		class Item0
 		{
 			className="A3_Ui_F";
@@ -170,64 +171,66 @@ class AddonsMetaData
 		};
 		class Item13
 		{
+			className="ace_nouniformrestrictions";
+			name="ACE3 - No Uniform Restrictions";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item14
+		{
 			className="A3_Air_F_Beta";
 			name="Arma 3 Beta - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item14
+		class Item15
 		{
 			className="ace_parachute";
 			name="ACE3 - Parachute";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item15
+		class Item16
 		{
 			className="A3_Air_F_EPC";
 			name="Arma 3 Win Episode - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item16
+		class Item17
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item17
+		class Item18
 		{
 			className="A3_Soft_F_Beta";
 			name="Arma 3 Beta - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item18
+		class Item19
 		{
 			className="A3_Soft_F_Exp";
 			name="Arma 3 Apex - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item19
+		class Item20
 		{
 			className="ace_cargo";
 			name="ACE3 - Cargo";
 			author="ACE-Team";
 			url="http://ace3mod.com/";
 		};
-		class Item20
+		class Item21
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
-		};
-		class Item21
-		{
-			className="Blastcore_VEP";
-			name="Blastcore_VEP";
 		};
 		class Item22
 		{
@@ -266,31 +269,36 @@ class AddonsMetaData
 		};
 		class Item27
 		{
+			className="itc_land_veh_strider";
+			name="itc_land_veh_strider";
+		};
+		class Item28
+		{
 			className="gordon_reskins_pandur";
 			name="gordon_reskins_pandur";
 		};
-		class Item28
+		class Item29
 		{
 			className="A3_Armor_F_EPB";
 			name="Arma 3 Adapt Episode - Armored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item29
+		class Item30
 		{
 			className="A3_Air_F_EPB";
 			name="Arma 3 Adapt Episode - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item30
+		class Item31
 		{
 			className="A3_Air_F_Gamma";
 			name="Arma 3 - Aircraft";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item31
+		class Item32
 		{
 			className="ace_cookoff";
 			name="ACE3 - Cook off";
@@ -369,7 +377,26 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=1;
+		class Attribute1
+		{
+			property="cba_settings_hasSettingsFile";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		nAttributes=2;
 	};
 };
 class Mission
@@ -1171,7 +1198,7 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="blu_0_1";
-						description="Zero - Platoon Commander";
+						description="Platoon Commander@Zero";
 						isPlayer=1;
 						isPlayable=1;
 					};
@@ -1234,7 +1261,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="blu_0_2";
-						description="Zero - Platoon Medic";
+						description="Platoon Medic";
 						isPlayable=1;
 					};
 					id=537;
@@ -1296,7 +1323,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="blu_0_3";
-						description="Zero - Platoon FAC";
+						description="Platoon FAC";
 						isPlayable=1;
 					};
 					id=538;
@@ -1446,8 +1473,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7503,3.5014391,7470.0498};
-						angles[]={0.24497849,0,0};
+						position[]={7503,3.5014389,7470.0498};
+						angles[]={0.24497442,0,0};
 					};
 					side="West";
 					flags=6;
@@ -1455,12 +1482,11 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="blu_1_1";
-						description="Alpha 1 - Squad Leader";
+						description="A1 - Squad Leader@Alpha";
 						isPlayable=1;
 					};
 					id=545;
 					type="B_Soldier_SL_F";
-					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -1517,7 +1543,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_1_2";
-						description="Alpha 1 - Pointman";
+						description="A1 - Pointman";
 						isPlayable=1;
 					};
 					id=546;
@@ -1578,7 +1604,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_1_3";
-						description="Alpha 1 - Rifleman";
+						description="A1 - Rifleman";
 						isPlayable=1;
 					};
 					id=547;
@@ -1640,7 +1666,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_1_4";
-						description="Alpha 1 - Anti-Tank Gunner";
+						description="A1 - Anti-Tank Gunner";
 						isPlayable=1;
 					};
 					id=548;
@@ -1702,7 +1728,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_1_5";
-						description="Alpha 1 - Anti-Tank Assistant";
+						description="A1 - Anti-Tank Assistant";
 						isPlayable=1;
 					};
 					id=549;
@@ -1765,7 +1791,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="blu_1_6";
-						description="Alpha 2 - Team Leader";
+						description="A2 - Team Leader";
 						isPlayable=1;
 					};
 					id=550;
@@ -1826,7 +1852,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_1_7";
-						description="Alpha 2 - Paramedic";
+						description="A2 - Paramedic";
 						isPlayable=1;
 					};
 					id=551;
@@ -1887,7 +1913,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_1_8";
-						description="Alpha 2 - Rifleman";
+						description="A2 - Rifleman";
 						isPlayable=1;
 					};
 					id=552;
@@ -1948,7 +1974,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_1_9";
-						description="Alpha 2 - Light Machine Gunner";
+						description="A2 - Light Machine Gunner";
 						isPlayable=1;
 					};
 					id=553;
@@ -2010,7 +2036,7 @@ class Mission
 					{
 						init="call{this setVariable [""unit_loadout_role"",""lmgAss""];}";
 						name="blu_1_10";
-						description="Alpha 2 - Light Machine Gunner Assistant";
+						description="A2 - Light Machine Gunner Assistant";
 						isPlayable=1;
 					};
 					id=554;
@@ -2064,7 +2090,6 @@ class Mission
 				name="blu_1";
 			};
 			id=544;
-			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2101,8 +2126,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7515,3.5014391,7470.0498};
-						angles[]={0.24497849,0,0};
+						position[]={7515,3.5014389,7470.0498};
+						angles[]={0.24497442,0,0};
 					};
 					side="West";
 					flags=6;
@@ -2110,12 +2135,11 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="blu_2_1";
-						description="Bravo 1 - Squad Leader";
+						description="B1 - Squad Leader@Bravo";
 						isPlayable=1;
 					};
 					id=556;
 					type="B_Soldier_SL_F";
-					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2172,7 +2196,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_2_2";
-						description="Bravo 1 - Pointman";
+						description="B1 - Pointman";
 						isPlayable=1;
 					};
 					id=557;
@@ -2234,7 +2258,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_2_3";
-						description="Bravo 1 - Rifleman (AT)";
+						description="B1 - Rifleman (AT)";
 						isPlayable=1;
 					};
 					id=558;
@@ -2288,20 +2312,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7515,4.0014391,7468.0498};
-						angles[]={0.24497849,6.2246819,0};
+						position[]={7521,3.5014389,7470.0498};
+						angles[]={0.24497442,0,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						rank="CORPORAL";
-						name="blu_2_6";
-						description="Bravo 2 - Team Leader";
+						name="blu_2_4";
+						description="B1 - Marksman";
 						isPlayable=1;
 					};
-					id=561;
-					type="B_Soldier_TL_F";
+					id=682;
+					type="B_soldier_M_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2319,7 +2342,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male03ENG";
 								};
 							};
 						};
@@ -2338,7 +2361,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1;
+									value=1.02;
 								};
 							};
 						};
@@ -2350,19 +2373,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7517,4.0014391,7468.0498};
-						angles[]={0.24497849,6.2246819,0};
+						position[]={7523,3.5014389,7470.0498};
+						angles[]={0.24497442,0,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						name="blu_2_7";
-						description="Bravo 2 - Paramedic";
+						name="blu_2_5";
+						description="B1 - Grenadier";
 						isPlayable=1;
 					};
-					id=562;
-					type="B_medic_F";
+					id=684;
+					type="B_Soldier_GL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2411,19 +2434,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7519,4.0014391,7468.0498};
+						position[]={7515,4.0014391,7468.0498};
 						angles[]={0.24497849,6.2246819,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						name="blu_2_8";
-						description="Bravo 2 - Rifleman (AT)";
+						rank="CORPORAL";
+						name="blu_2_6";
+						description="B2 - Team Leader";
 						isPlayable=1;
 					};
-					id=563;
-					type="B_soldier_LAT_F";
+					id=561;
+					type="B_Soldier_TL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2472,19 +2496,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7521,3.5014389,7470.0498};
-						angles[]={0.24497442,0,0};
+						position[]={7517,4.0014391,7468.0498};
+						angles[]={0.24497849,6.2246819,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						name="blu_2_4";
-						description="Bravo 1 - Marksman";
+						name="blu_2_7";
+						description="B2 - Paramedic";
 						isPlayable=1;
 					};
-					id=682;
-					type="B_soldier_M_F";
+					id=562;
+					type="B_medic_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2502,7 +2526,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03ENG";
+									value="Male04ENG";
 								};
 							};
 						};
@@ -2521,7 +2545,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.02;
+									value=1;
 								};
 							};
 						};
@@ -2533,19 +2557,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7521,4.0014391,7468.0498};
-						angles[]={0.24497442,6.2246819,0};
+						position[]={7519,4.0014391,7468.0498};
+						angles[]={0.24497849,6.2246819,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						name="blu_2_9";
-						description="Bravo 2 - Light Machine Gunner";
+						name="blu_2_8";
+						description="B2 - Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=683;
-					type="B_soldier_AR_F";
+					id=563;
+					type="B_soldier_LAT_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2594,19 +2618,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7523,3.5014389,7470.0498};
-						angles[]={0.24497442,0,0};
+						position[]={7521,4.0014391,7468.0498};
+						angles[]={0.24497442,6.2246819,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
-						name="blu_2_5";
-						description="Bravo 1 - Grenadier";
+						name="blu_2_9";
+						description="B2 - Light Machine Gunner";
 						isPlayable=1;
 					};
-					id=684;
-					type="B_Soldier_GL_F";
+					id=683;
+					type="B_soldier_AR_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -2663,7 +2687,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_2_10";
-						description="Bravo 2 - Light Machine Gunner Assistant";
+						description="B2 - Light Machine Gunner Assistant";
 						isPlayable=1;
 					};
 					id=685;
@@ -2717,7 +2741,6 @@ class Mission
 				name="blu_2";
 			};
 			id=555;
-			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2763,7 +2786,7 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="blu_3_1";
-						description="Charlie 1 - Squad Leader";
+						description="C1 - Squad Leader@Charlie";
 						isPlayable=1;
 					};
 					id=567;
@@ -2824,7 +2847,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_3_2";
-						description="Charlie 1 - Pointman";
+						description="C1 - Pointman";
 						isPlayable=1;
 					};
 					id=568;
@@ -2886,7 +2909,7 @@ class Mission
 					{
 						skill=0.49851751;
 						name="blu_3_3";
-						description="Charlie 1 - Rifleman (AT)";
+						description="C1 - Rifleman (AT)";
 						isPlayable=1;
 					};
 					id=569;
@@ -2947,7 +2970,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_3_4";
-						description="Charlie 1 - Anti-Tank Gunner";
+						description="C1 - Anti-Tank Gunner";
 						isPlayable=1;
 					};
 					id=570;
@@ -3000,20 +3023,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7535,3.5014391,7470.0498};
-						angles[]={0.24497849,0,0};
+						position[]={7535,3.5014389,7470.0498};
+						angles[]={0.24497442,0,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						name="blu_3_5";
-						description=" Charlie 1 - Anti-Tank Assistant";
+						description="C1 - Anti-Tank Assistant";
 						isPlayable=1;
 					};
 					id=571;
 					type="B_soldier_AAT_F";
-					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3071,7 +3093,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="blu_3_6";
-						description="Charlie 2 - Team Leader";
+						description="C2 - Team Leader";
 						isPlayable=1;
 					};
 					id=572;
@@ -3132,7 +3154,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_3_7";
-						description="Charlie 2 - Paramedic";
+						description="C2 - Paramedic";
 						isPlayable=1;
 					};
 					id=573;
@@ -3193,7 +3215,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_3_8";
-						description="Charlie 2 - Rifleman (AT)";
+						description="C2 - Rifleman (AT)";
 						isPlayable=1;
 					};
 					id=574;
@@ -3254,7 +3276,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_3_9";
-						description="Charlie 2 - Light Machine Gunner";
+						description="C2 - Light Machine Gunner";
 						isPlayable=1;
 					};
 					id=575;
@@ -3308,14 +3330,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={7535,4.0014391,7468.0498};
-						angles[]={0.24497849,6.2246819,0};
+						angles[]={0.24497442,6.2246819,0};
 					};
 					side="West";
 					flags=4;
 					class Attributes
 					{
 						name="blu_3_10";
-						description=" Charlie 2 - Light Machine Gunner Assistant";
+						description="C2 - Light Machine Gunner Assistant";
 						isPlayable=1;
 					};
 					id=576;
@@ -3405,8 +3427,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7538,3.5014391,7470.0498};
-						angles[]={0.24497849,0,0};
+						position[]={7538,3.5014389,7470.0498};
+						angles[]={0.24497442,0,0};
 					};
 					side="West";
 					flags=6;
@@ -3414,12 +3436,11 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="blu_4_1";
-						description="Delta 1 - Recon Squad Leader";
+						description="D1 - Recon Squad Leader@Delta";
 						isPlayable=1;
 					};
 					id=578;
 					type="B_recon_JTAC_F";
-					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -3476,7 +3497,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_4_2";
-						description="Delta 1 - Recon Scout";
+						description="D1 - Recon Scout";
 						isPlayable=1;
 					};
 					id=579;
@@ -3538,7 +3559,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_4_3";
-						description="Delta 1 - Recon Scout (AT)";
+						description="D1 - Recon Scout (AT)";
 						isPlayable=1;
 					};
 					id=580;
@@ -3600,7 +3621,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_4_4";
-						description="Delta 1 - Recon Marksman";
+						description="D1 - Recon Marksman";
 						isPlayable=1;
 					};
 					id=581;
@@ -3662,7 +3683,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_4_5";
-						description="Delta 1 - Recon Demo Specialist";
+						description="D1 - Recon Demo Specialist";
 						isPlayable=1;
 					};
 					id=582;
@@ -3725,7 +3746,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="blu_4_6";
-						description="Delta 2 - Recon Team Leader";
+						description="D2 - Recon Team Leader";
 						isPlayable=1;
 					};
 					id=583;
@@ -3786,7 +3807,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_4_7";
-						description="Delta 2 - Recon Paramedic";
+						description="D2 - Recon Paramedic";
 						isPlayable=1;
 					};
 					id=584;
@@ -3847,7 +3868,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_4_8";
-						description="Delta 2 - Recon Scout (AT)";
+						description="D2 - Recon Scout (AT)";
 						isPlayable=1;
 					};
 					id=585;
@@ -3908,7 +3929,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_4_9";
-						description="Delta 2 - Recon Marksman";
+						description="D2 - Recon Marksman";
 						isPlayable=1;
 					};
 					id=586;
@@ -3969,7 +3990,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_4_10";
-						description="Delta 2 - Recon Demo Specialist";
+						description="D2 - Recon Demo Specialist";
 						isPlayable=1;
 					};
 					id=587;
@@ -4023,7 +4044,6 @@ class Mission
 				name="blu_4";
 			};
 			id=577;
-			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -4452,7 +4472,7 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="blu_10_1";
-						description="Yankee - Platoon Commander";
+						description="Platoon Commander@Yankee";
 						isPlayable=1;
 					};
 					id=825;
@@ -4514,7 +4534,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="blu_10_2";
-						description="Yankee - Platoon Medic";
+						description="Platoon Medic";
 						isPlayable=1;
 					};
 					id=826;
@@ -4595,7 +4615,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="blu_10_3";
-						description="Yankee - Platoon FAC";
+						description="Platoon FAC";
 						isPlayable=1;
 					};
 					id=827;
@@ -4711,7 +4731,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_11_1";
-						description="Anvil (AMV-7) - Commander";
+						description="(AMV-7) - Commander@Anvil";
 						isPlayable=1;
 					};
 					id=805;
@@ -4790,7 +4810,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_11_2";
-						description="Anvil (AMV-7) - Gunner";
+						description="(AMV-7) - Gunner";
 						isPlayable=1;
 					};
 					id=806;
@@ -4869,7 +4889,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_11_3";
-						description="Anvil (AMV-7) - Driver";
+						description="(AMV-7) - Driver";
 						isPlayable=1;
 					};
 					id=807;
@@ -4959,7 +4979,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Anvil (APC)";
+							value="(APC)";
 						};
 					};
 				};
@@ -5004,7 +5024,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_12_1";
-						description="Berserker (IFV-6c Panther) - Commander";
+						description="(IFV-6c Panther) - Commander@Berserker";
 						isPlayable=1;
 					};
 					id=830;
@@ -5083,7 +5103,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_12_2";
-						description="Berserker (IFV-6c Panther) - Gunner";
+						description="(IFV-6c Panther) - Gunner";
 						isPlayable=1;
 					};
 					id=831;
@@ -5162,7 +5182,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_12_3";
-						description="Berserker (IFV-6c Panther) - Driver";
+						description="(IFV-6c Panther) - Driver";
 						isPlayable=1;
 					};
 					id=832;
@@ -5252,7 +5272,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Berserker (IFV)";
+							value="(IFV)";
 						};
 					};
 				};
@@ -5337,7 +5357,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_13_1";
-						description="Coyote (M2A1 Slammer) - Commander";
+						description="(M2A1 Slammer) - Commander@Coyote";
 						isPlayable=1;
 					};
 					id=809;
@@ -5397,7 +5417,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_13_2";
-						description="Coyote (M2A1 Slammer) - Gunner";
+						description="(M2A1 Slammer) - Gunner";
 						isPlayable=1;
 					};
 					id=810;
@@ -5457,7 +5477,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_13_3";
-						description="Coyote (M2A1 Slammer) - Driver";
+						description="(M2A1 Slammer) - Driver";
 						isPlayable=1;
 					};
 					id=811;
@@ -5528,7 +5548,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Coyote (TANK)";
+							value="(TANK)";
 						};
 					};
 				};
@@ -5634,7 +5654,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_14_1";
-						description="Doomsday (IFV-6a) - Commander";
+						description="(IFV-6a) - Commander@Doomsday";
 						isPlayable=1;
 					};
 					id=814;
@@ -5694,7 +5714,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_14_2";
-						description="Doomsday (IFV-6a) - Gunner";
+						description="(IFV-6a) - Gunner";
 						isPlayable=1;
 					};
 					id=815;
@@ -5754,7 +5774,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_14_3";
-						description="Doomsday (IFV-6a) - Driver";
+						description="(IFV-6a) - Driver";
 						isPlayable=1;
 					};
 					id=816;
@@ -5825,7 +5845,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Doomsday (AA)";
+							value="(AA)";
 						};
 					};
 				};
@@ -5851,7 +5871,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_15_1";
-						description="Excalibur (M4 Scorcher) - Commander";
+						description="(M4 Scorcher) - Commander@Excalibur";
 						isPlayable=1;
 					};
 					id=819;
@@ -5911,7 +5931,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_15_2";
-						description="Excalibur (M4 Scorcher) - Gunner";
+						description="(M4 Scorcher) - Gunner";
 						isPlayable=1;
 					};
 					id=820;
@@ -5971,7 +5991,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_15_3";
-						description="Excalibur (M4 Scorcher) - Driver";
+						description="(M4 Scorcher) - Driver";
 						isPlayable=1;
 					};
 					id=821;
@@ -6042,7 +6062,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Excalibur (Artillery)";
+							value="(Artillery)";
 						};
 					};
 				};
@@ -6147,7 +6167,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_21_1";
-						description="Falcon (AH-6) - Pilot";
+						description="(AH-6) - Pilot@Falcon";
 						isPlayable=1;
 					};
 					id=867;
@@ -6207,7 +6227,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_21_2";
-						description="Falcon (AH-6) - Co-Pilot";
+						description="(AH-6) - Co-Pilot";
 						isPlayable=1;
 					};
 					id=868;
@@ -6278,7 +6298,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Falcon (Light Attack Heli)";
+							value="(Light Attack Heli)";
 						};
 					};
 				};
@@ -6304,7 +6324,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_22_1";
-						description="Goliath (UH-80) - Pilot";
+						description="(UH-80) - Pilot@Goliath";
 						isPlayable=1;
 					};
 					id=873;
@@ -6364,7 +6384,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_22_2";
-						description="Goliath (UH-80) - Co-Pilot";
+						description="(UH-80) - Co-Pilot";
 						isPlayable=1;
 					};
 					id=874;
@@ -6435,7 +6455,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Goliath (Transport Heli)";
+							value="(Transport Heli)";
 						};
 					};
 				};
@@ -6566,7 +6586,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_23_1";
-						description="Hornet (A-10) - Pilot";
+						description="(A-10) - Pilot@Hornet";
 						isPlayable=1;
 					};
 					id=890;
@@ -6637,7 +6657,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Hornet (Jet)";
+							value="(Jet)";
 						};
 					};
 				};
@@ -6736,7 +6756,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_31_1";
-						description="Ingot - Senior Engineer";
+						description="Senior Engineer@Ingot";
 						isPlayable=1;
 					};
 					id=892;
@@ -6796,7 +6816,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_31_2";
-						description="Ingot - Demoman";
+						description="Demoman";
 						isPlayable=1;
 					};
 					id=895;
@@ -6856,7 +6876,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_31_3";
-						description="Ingot - Engineer";
+						description="Engineer";
 						isPlayable=1;
 					};
 					id=896;
@@ -6953,7 +6973,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_32_1";
-						description="Jackhammer - Squad leader";
+						description="Squad leader@Jackhammer";
 						isPlayable=1;
 					};
 					id=901;
@@ -7013,7 +7033,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_32_2";
-						description="Jackhammer - Mortar Gunner";
+						description="Mortar Gunner";
 						isPlayable=1;
 					};
 					id=902;
@@ -7073,7 +7093,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_32_3";
-						description="Jackhammer - Mortar Assistant";
+						description="Mortar Assistant";
 						isPlayable=1;
 					};
 					id=903;
@@ -7192,7 +7212,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_33_2";
-						description="Kingslayer - Sniper";
+						description="Sniper";
 						isPlayable=1;
 					};
 					id=911;
@@ -7252,7 +7272,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_33_1";
-						description="Kingslayer - Spotter";
+						description="Spotter@Kingslayer";
 						isPlayable=1;
 					};
 					id=912;
@@ -7361,7 +7381,7 @@ class Mission
 					{
 						init="call{this setVariable [""unit_loadout_role"",""custom1""];}";
 						name="blu_34_1";
-						description="Lucifer - Medic Leader";
+						description="Medic Leader@Lucifer";
 						isPlayable=1;
 					};
 					id=917;
@@ -7421,7 +7441,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_34_2";
-						description="Lucifer - Medic";
+						description="Medic";
 						isPlayable=1;
 					};
 					id=918;
@@ -7481,7 +7501,7 @@ class Mission
 					class Attributes
 					{
 						name="blu_34_3";
-						description="Lucifer - Assistant Medic";
+						description="Assistant Medic";
 						isPlayable=1;
 					};
 					id=920;
@@ -8318,8 +8338,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7568,4.0639391,7493.0498};
-						angles[]={0,4.712389,0.24497849};
+						position[]={7568,4.0644388,7493.0498};
+						angles[]={0,4.712389,0.24497442};
 					};
 					side="Independent";
 					flags=6;
@@ -8327,12 +8347,12 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="ind_0_1";
-						description="Zero - Platoon Commander";
+						description="Platoon Commander@Zero";
 						isPlayable=1;
 					};
 					id=1103;
 					type="I_officer_F";
-					atlOffset=0.0625;
+					atlOffset=0.062999725;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8390,7 +8410,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="ind_0_2";
-						description="Zero - Platoon Medic";
+						description="Platoon Medic";
 						isPlayable=1;
 					};
 					id=1104;
@@ -8453,7 +8473,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="ind_0_3";
-						description="Zero - Platoon FAC";
+						description="Platoon FAC";
 						isPlayable=1;
 					};
 					id=1105;
@@ -8508,7 +8528,7 @@ class Mission
 				name="ind_0";
 			};
 			id=1102;
-			atlOffset=0.0625;
+			atlOffset=0.062999725;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -8597,8 +8617,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7566,3.5639389,7504.0498};
-						angles[]={0,4.712389,0.24497849};
+						position[]={7566,3.5644388,7504.0498};
+						angles[]={0,4.712389,0.24497442};
 					};
 					side="Independent";
 					flags=6;
@@ -8606,12 +8626,12 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="ind_1_1";
-						description="Alpha 1 - Squad Leader";
+						description="A1 - Squad Leader@Alpha";
 						isPlayable=1;
 					};
 					id=1111;
 					type="I_Soldier_SL_F";
-					atlOffset=0.0625;
+					atlOffset=0.062999964;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8668,7 +8688,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_1_2";
-						description="Alpha 1 - Pointman";
+						description="A1 - Pointman";
 						isPlayable=1;
 					};
 					id=1112;
@@ -8730,7 +8750,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_1_3";
-						description="Alpha 1 - Rifleman";
+						description="A1 - Rifleman";
 						isPlayable=1;
 					};
 					id=1113;
@@ -8792,7 +8812,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_1_4";
-						description="Alpha 1 - Anti-Tank Gunner";
+						description="A1 - Anti-Tank Gunner";
 						isPlayable=1;
 					};
 					id=1114;
@@ -8854,7 +8874,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_1_5";
-						description="Alpha 1 - Anti-Tank Assistant";
+						description="A1 - Anti-Tank Assistant";
 						isPlayable=1;
 					};
 					id=1115;
@@ -8917,7 +8937,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="ind_1_6";
-						description="Alpha 2 - Team Leader";
+						description="A2 - Team Leader";
 						isPlayable=1;
 					};
 					id=1116;
@@ -8979,7 +8999,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_1_7";
-						description="Alpha 2 - Paramedic";
+						description="A2 - Paramedic";
 						isPlayable=1;
 					};
 					id=1117;
@@ -9041,7 +9061,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_1_8";
-						description="Alpha 2 - Rifleman";
+						description="A2 - Rifleman";
 						isPlayable=1;
 					};
 					id=1118;
@@ -9103,7 +9123,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_1_9";
-						description="Alpha 2 - Light Machine Gunner";
+						description="A2 - Light Machine Gunner";
 						isPlayable=1;
 					};
 					id=1119;
@@ -9166,7 +9186,7 @@ class Mission
 					{
 						init="call{this setVariable [""unit_loadout_role"",""lmgAss""];}";
 						name="ind_1_10";
-						description="Alpha 2 - Light Machine Gunner Assistant";
+						description="A2 - Light Machine Gunner Assistant";
 						isPlayable=1;
 					};
 					id=1120;
@@ -9221,7 +9241,7 @@ class Mission
 				name="ind_1";
 			};
 			id=1110;
-			atlOffset=0.0625;
+			atlOffset=0.062999964;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9258,8 +9278,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7566,3.5014391,7516.0498};
-						angles[]={0,4.712389,0.24497849};
+						position[]={7566,3.5014389,7516.0498};
+						angles[]={0,4.712389,0.24497442};
 					};
 					side="Independent";
 					flags=6;
@@ -9267,12 +9287,11 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="ind_2_1";
-						description="Bravo 1 - Squad Leader";
+						description="B1 - Squad Leader@Bravo";
 						isPlayable=1;
 					};
 					id=1122;
 					type="I_Soldier_SL_F";
-					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9329,7 +9348,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_2_2";
-						description="Bravo 1 - Pointman";
+						description="B1 - Pointman";
 						isPlayable=1;
 					};
 					id=1123;
@@ -9391,7 +9410,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_2_3";
-						description="Bravo 1 - Rifleman (AT)";
+						description="B1 - Rifleman (AT)";
 						isPlayable=1;
 					};
 					id=1124;
@@ -9445,190 +9464,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7568,4.0014391,7516.0498};
-						angles[]={0,4.6538854,0.24497849};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						rank="CORPORAL";
-						name="ind_2_6";
-						description="Bravo 2 - Team Leader";
-						isPlayable=1;
-					};
-					id=1125;
-					type="I_Soldier_TL_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male04ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item4
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7568,4.0014391,7518.0498};
-						angles[]={0,4.6538854,0.24497849};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						name="ind_2_7";
-						description="Bravo 2 - Paramedic";
-						isPlayable=1;
-					};
-					id=1126;
-					type="I_medic_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male04ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item5
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={7568,4.0014391,7520.0498};
-						angles[]={0,4.6538854,0.24497849};
-					};
-					side="Independent";
-					flags=4;
-					class Attributes
-					{
-						name="ind_2_8";
-						description="Bravo 2 - Rifleman (AT)";
-						isPlayable=1;
-					};
-					id=1127;
-					type="I_Soldier_LAT_F";
-					class CustomAttributes
-					{
-						class Attribute0
-						{
-							property="speaker";
-							expression="_this setspeaker _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"STRING"
-										};
-									};
-									value="Male04ENG";
-								};
-							};
-						};
-						class Attribute1
-						{
-							property="pitch";
-							expression="_this setpitch _value;";
-							class Value
-							{
-								class data
-								{
-									class type
-									{
-										type[]=
-										{
-											"SCALAR"
-										};
-									};
-									value=1;
-								};
-							};
-						};
-						nAttributes=2;
-					};
-				};
-				class Item6
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={7566,3.5014391,7522.0498};
 						angles[]={0,4.712389,0.24497849};
 					};
@@ -9637,7 +9472,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_2_4";
-						description="Bravo 1 - Marksman";
+						description="B1 - Marksman";
 						isPlayable=1;
 					};
 					id=1128;
@@ -9686,24 +9521,209 @@ class Mission
 						nAttributes=2;
 					};
 				};
-				class Item7
+				class Item4
 				{
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7568,4.0014391,7522.0498};
+						position[]={7566,3.5014391,7524.0498};
+						angles[]={0,4.712389,0.24497849};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						name="ind_2_5";
+						description="B1 - Grenadier";
+						isPlayable=1;
+					};
+					id=1130;
+					type="I_Soldier_GL_F";
+					atlOffset=2.3841858e-007;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male04ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7568,4.0014391,7516.0498};
 						angles[]={0,4.6538854,0.24497849};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						name="ind_2_9";
-						description="Bravo 2 - Light Machine Gunner";
+						rank="CORPORAL";
+						name="ind_2_6";
+						description="B2 - Team Leader";
 						isPlayable=1;
 					};
-					id=1129;
-					type="I_Soldier_AR_F";
+					id=1125;
+					type="I_Soldier_TL_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male04ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7568,4.0014391,7518.0498};
+						angles[]={0,4.6538854,0.24497849};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						name="ind_2_7";
+						description="B2 - Paramedic";
+						isPlayable=1;
+					};
+					id=1126;
+					type="I_medic_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male04ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={7568,4.0014391,7520.0498};
+						angles[]={0,4.6538854,0.24497849};
+					};
+					side="Independent";
+					flags=4;
+					class Attributes
+					{
+						name="ind_2_8";
+						description="B2 - Rifleman (AT)";
+						isPlayable=1;
+					};
+					id=1127;
+					type="I_Soldier_LAT_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9752,20 +9772,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7566,3.5014391,7524.0498};
-						angles[]={0,4.712389,0.24497849};
+						position[]={7568,4.0014391,7522.0498};
+						angles[]={0,4.6538854,0.24497849};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
-						name="ind_2_5";
-						description="Bravo 1 - Grenadier";
+						name="ind_2_9";
+						description="B2 - Light Machine Gunner";
 						isPlayable=1;
 					};
-					id=1130;
-					type="I_Soldier_GL_F";
-					atlOffset=2.3841858e-007;
+					id=1129;
+					type="I_Soldier_AR_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9822,7 +9841,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_2_10";
-						description="Bravo 2 - Light Machine Gunner Assistant";
+						description="B2 - Light Machine Gunner Assistant";
 						isPlayable=1;
 					};
 					id=1131;
@@ -9876,7 +9895,6 @@ class Mission
 				name="ind_2";
 			};
 			id=1121;
-			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -9913,8 +9931,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7566,3.5014391,7528.0498};
-						angles[]={0,4.712389,0.24497849};
+						position[]={7566,3.5014389,7528.0498};
+						angles[]={0,4.712389,0.24497442};
 					};
 					side="Independent";
 					flags=6;
@@ -9922,12 +9940,11 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="ind_3_1";
-						description="Charlie 1 - Squad Leader";
+						description="C1 - Squad Leader@Charlie";
 						isPlayable=1;
 					};
 					id=1133;
 					type="I_Soldier_SL_F";
-					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -9984,7 +10001,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_3_2";
-						description="Charlie 1 - Pointman";
+						description="C1 - Pointman";
 						isPlayable=1;
 					};
 					id=1134;
@@ -10047,7 +10064,7 @@ class Mission
 					{
 						skill=0.49851751;
 						name="ind_3_3";
-						description="Charlie 1 - Rifleman (AT)";
+						description="C1 - Rifleman (AT)";
 						isPlayable=1;
 					};
 					id=1135;
@@ -10109,7 +10126,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_3_4";
-						description="Charlie 1 - Anti-Tank Gunner";
+						description="C1 - Anti-Tank Gunner";
 						isPlayable=1;
 					};
 					id=1136;
@@ -10163,20 +10180,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7566,3.5014391,7536.0498};
-						angles[]={0,4.712389,0.24497849};
+						position[]={7566,3.5014389,7536.0498};
+						angles[]={0,4.712389,0.24497442};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
 						name="ind_3_5";
-						description=" Charlie 1 - Anti-Tank Assistant";
+						description="C1 - Anti-Tank Assistant";
 						isPlayable=1;
 					};
 					id=1137;
 					type="I_Soldier_AAT_F";
-					atlOffset=2.3841858e-007;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10234,7 +10250,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="ind_3_6";
-						description="Charlie 2 - Team Leader";
+						description="C2 - Team Leader";
 						isPlayable=1;
 					};
 					id=1138;
@@ -10295,7 +10311,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_3_7";
-						description="Charlie 2 - Paramedic";
+						description="C2 - Paramedic";
 						isPlayable=1;
 					};
 					id=1139;
@@ -10356,7 +10372,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_3_8";
-						description="Charlie 2 - Rifleman (AT)";
+						description="C2 - Rifleman (AT)";
 						isPlayable=1;
 					};
 					id=1140;
@@ -10417,7 +10433,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_3_9";
-						description="Charlie 2 - Light Machine Gunner";
+						description="C2 - Light Machine Gunner";
 						isPlayable=1;
 					};
 					id=1141;
@@ -10471,14 +10487,14 @@ class Mission
 					class PositionInfo
 					{
 						position[]={7568,4.0014391,7536.0498};
-						angles[]={0,4.6538854,0.24497849};
+						angles[]={0,4.6538858,0.24497442};
 					};
 					side="Independent";
 					flags=4;
 					class Attributes
 					{
 						name="ind_3_10";
-						description=" Charlie 2 - Light Machine Gunner Assistant";
+						description="C2 - Light Machine Gunner Assistant";
 						isPlayable=1;
 					};
 					id=1142;
@@ -10532,7 +10548,6 @@ class Mission
 				name="ind_3";
 			};
 			id=1132;
-			atlOffset=2.3841858e-007;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -10816,7 +10831,7 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="ind_10_1";
-						description="Yankee - Platoon Commander";
+						description="Platoon Commander@Yankee";
 						isPlayable=1;
 					};
 					id=1150;
@@ -10879,7 +10894,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="ind_10_2";
-						description="Yankee - Platoon Medic";
+						description="Platoon Medic";
 						isPlayable=1;
 					};
 					id=1151;
@@ -10942,7 +10957,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="ind_10_3";
-						description="Yankee - Platoon FAC";
+						description="Platoon FAC";
 						isPlayable=1;
 					};
 					id=1152;
@@ -11041,7 +11056,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_11_1";
-						description="Anvil (Pandur II) - Commander";
+						description="(Pandur II) - Commander@Anvil";
 						isPlayable=1;
 					};
 					id=1154;
@@ -11102,7 +11117,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_11_2";
-						description="Anvil (Pandur II) - Gunner";
+						description="(Pandur II) - Gunner";
 						isPlayable=1;
 					};
 					id=1155;
@@ -11163,7 +11178,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_11_3";
-						description="Anvil (Pandur II) - Driver";
+						description="(Pandur II) - Driver";
 						isPlayable=1;
 					};
 					id=1156;
@@ -11234,7 +11249,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Anvil (APC)";
+							value="(APC)";
 						};
 					};
 				};
@@ -11261,7 +11276,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_12_1";
-						description="Berserker (FV510 Warrior) - Commander";
+						description="(FV510 Warrior) - Commander@Berserker";
 						isPlayable=1;
 					};
 					id=1158;
@@ -11322,7 +11337,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_12_2";
-						description="Berserker (FV510 Warrior) - Gunner";
+						description="(FV510 Warrior) - Gunner";
 						isPlayable=1;
 					};
 					id=1159;
@@ -11383,7 +11398,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_12_3";
-						description="Berserker (FV510 Warrior) - Driver";
+						description="(FV510 Warrior) - Driver";
 						isPlayable=1;
 					};
 					id=1160;
@@ -11454,7 +11469,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Berserker (IFV)";
+							value="(IFV)";
 						};
 					};
 				};
@@ -11522,7 +11537,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_13_1";
-						description="Coyote (Leopard II) - Commander";
+						description="(Leopard II) - Commander@Coyote";
 						isPlayable=1;
 					};
 					id=1163;
@@ -11583,7 +11598,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_13_2";
-						description="Coyote (Leopard II) - Gunner";
+						description="(Leopard II) - Gunner";
 						isPlayable=1;
 					};
 					id=1164;
@@ -11644,7 +11659,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_13_3";
-						description="Coyote (Leopard II) - Driver";
+						description="(Leopard II) - Driver";
 						isPlayable=1;
 					};
 					id=1165;
@@ -11715,7 +11730,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Coyote (TANK)";
+							value="(TANK)";
 						};
 					};
 				};
@@ -11824,7 +11839,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_14_1";
-						description="Doomsday (IFV-6a) - Commander";
+						description="(IFV-6a) - Commander@Doomsday";
 						isPlayable=1;
 					};
 					id=1169;
@@ -11885,7 +11900,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_14_2";
-						description="Doomsday (IFV-6a) - Gunner";
+						description="(IFV-6a) - Gunner";
 						isPlayable=1;
 					};
 					id=1170;
@@ -11946,7 +11961,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_14_3";
-						description="Doomsday (IFV-6a) - Driver";
+						description="(IFV-6a) - Driver";
 						isPlayable=1;
 					};
 					id=1171;
@@ -12017,7 +12032,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Doomsday (AA)";
+							value="(AA)";
 						};
 					};
 				};
@@ -12044,7 +12059,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_15_1";
-						description="Excalibur (MLRS) - Commander";
+						description="(MLRS) - Commander@Excalibur";
 						isPlayable=1;
 					};
 					id=1173;
@@ -12105,7 +12120,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_15_2";
-						description="Excalibur (MLRS) - Gunner";
+						description="(MLRS) - Gunner";
 						isPlayable=1;
 					};
 					id=1174;
@@ -12166,7 +12181,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_15_3";
-						description="Excalibur (MLRS) - Driver";
+						description="(MLRS) - Driver";
 						isPlayable=1;
 					};
 					id=1175;
@@ -12237,7 +12252,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Excalibur (Artillery)";
+							value="(Artillery)";
 						};
 					};
 				};
@@ -12751,7 +12766,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_21_1";
-						description="Falcon (Wildcat) - Pilot";
+						description="(Wildcat) - Pilot@Falcon";
 						isPlayable=1;
 					};
 					id=1193;
@@ -12812,7 +12827,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_21_2";
-						description="Falcon (Wildcat) - Co-Pilot";
+						description="(Wildcat) - Co-Pilot";
 						isPlayable=1;
 					};
 					id=1194;
@@ -12883,7 +12898,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Falcon (Attack Heli)";
+							value="(Attack Heli)";
 						};
 					};
 				};
@@ -12910,7 +12925,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_22_1";
-						description="Goliath (Merlin) - Pilot";
+						description="(Merlin) - Pilot@Goliath";
 						isPlayable=1;
 					};
 					id=1196;
@@ -12971,7 +12986,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_22_2";
-						description="Goliath (Merlin) - Co-Pilot";
+						description="(Merlin) - Co-Pilot";
 						isPlayable=1;
 					};
 					id=1197;
@@ -13042,7 +13057,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Goliath (Transport Heli)";
+							value="(Transport Heli)";
 						};
 					};
 				};
@@ -13110,7 +13125,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_23_1";
-						description="Hornet (L-39) - Pilot";
+						description="(L-39) - Pilot@Hornet";
 						isPlayable=1;
 					};
 					id=1200;
@@ -13181,7 +13196,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Hornet (Plane)";
+							value="(Plane)";
 						};
 					};
 				};
@@ -13284,7 +13299,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_31_1";
-						description="Ingot - Senior Engineer";
+						description="Senior Engineer@Ingot";
 						isPlayable=1;
 					};
 					id=1206;
@@ -13345,7 +13360,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_31_2";
-						description="Ingot - Demoman";
+						description="Demoman";
 						isPlayable=1;
 					};
 					id=1207;
@@ -13406,7 +13421,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_31_3";
-						description="Ingot - Engineer";
+						description="Engineer";
 						isPlayable=1;
 					};
 					id=1208;
@@ -13504,7 +13519,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_32_1";
-						description="Jackhammer - Squad leader";
+						description="Squad leader@Jackhammer";
 						isPlayable=1;
 					};
 					id=1210;
@@ -13565,7 +13580,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_32_2";
-						description="Jackhammer - Mortar Gunner";
+						description="Mortar Gunner";
 						isPlayable=1;
 					};
 					id=1211;
@@ -13626,7 +13641,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_32_3";
-						description="Jackhammer - Mortar Assistant";
+						description="Mortar Assistant";
 						isPlayable=1;
 					};
 					id=1212;
@@ -13748,7 +13763,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_33_2";
-						description="Kingslayer - Sniper";
+						description="Sniper";
 						isPlayable=1;
 					};
 					id=1216;
@@ -13809,7 +13824,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_33_1";
-						description="Kingslayer - Spotter";
+						description="Spotter@Kingslayer";
 						isPlayable=1;
 					};
 					id=1217;
@@ -13920,7 +13935,7 @@ class Mission
 					{
 						init="call{this setVariable [""unit_loadout_role"",""custom1""];}";
 						name="ind_34_1";
-						description="Lucifer - Medic Leader";
+						description="Medic Leader@Lucifer";
 						isPlayable=1;
 					};
 					id=1220;
@@ -13981,7 +13996,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_34_2";
-						description="Lucifer - Medic";
+						description="Medic";
 						isPlayable=1;
 					};
 					id=1221;
@@ -14042,7 +14057,7 @@ class Mission
 					class Attributes
 					{
 						name="ind_34_3";
-						description="Lucifer - Assistant Medic";
+						description="Assistant Medic";
 						isPlayable=1;
 					};
 					id=1222;
@@ -14325,7 +14340,7 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="op_0_1";
-						description="Zero - Platoon Commander";
+						description="Platoon Commander@Zero";
 						isPlayable=1;
 					};
 					id=1230;
@@ -14387,7 +14402,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="op_0_2";
-						description="Zero - Platoon Medic";
+						description="Platoon Medic";
 						isPlayable=1;
 					};
 					id=1231;
@@ -14449,7 +14464,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="op_0_3";
-						description="Zero - Platoon FAC";
+						description="Platoon FAC";
 						isPlayable=1;
 					};
 					id=1232;
@@ -14611,7 +14626,7 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="op_1_1";
-						description="Alpha 1 - Squad Leader";
+						description="A1 - Squad Leader@Alpha";
 						isPlayable=1;
 					};
 					id=1239;
@@ -14672,7 +14687,7 @@ class Mission
 					class Attributes
 					{
 						name="op_1_2";
-						description="Alpha 1 - Pointman";
+						description="A1 - Pointman";
 						isPlayable=1;
 					};
 					id=1240;
@@ -14733,7 +14748,7 @@ class Mission
 					class Attributes
 					{
 						name="op_1_3";
-						description="Alpha 1 - Rifleman";
+						description="A1 - Rifleman";
 						isPlayable=1;
 					};
 					id=1241;
@@ -14794,7 +14809,7 @@ class Mission
 					class Attributes
 					{
 						name="op_1_4";
-						description="Alpha 1 - Anti-Tank Gunner";
+						description="A1 - Anti-Tank Gunner";
 						isPlayable=1;
 					};
 					id=1242;
@@ -14855,7 +14870,7 @@ class Mission
 					class Attributes
 					{
 						name="op_1_5";
-						description="Alpha 1 - Anti-Tank Assistant";
+						description="A1 - Anti-Tank Assistant";
 						isPlayable=1;
 					};
 					id=1243;
@@ -14917,7 +14932,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="op_1_6";
-						description="Alpha 2 - Team Leader";
+						description="A2 - Team Leader";
 						isPlayable=1;
 					};
 					id=1244;
@@ -14978,7 +14993,7 @@ class Mission
 					class Attributes
 					{
 						name="op_1_7";
-						description="Alpha 2 - Paramedic";
+						description="A2 - Paramedic";
 						isPlayable=1;
 					};
 					id=1245;
@@ -15039,7 +15054,7 @@ class Mission
 					class Attributes
 					{
 						name="op_1_8";
-						description="Alpha 2 - Rifleman";
+						description="A2 - Rifleman";
 						isPlayable=1;
 					};
 					id=1246;
@@ -15100,7 +15115,7 @@ class Mission
 					class Attributes
 					{
 						name="op_1_9";
-						description="Alpha 2 - Light Machine Gunner";
+						description="A2 - Light Machine Gunner";
 						isPlayable=1;
 					};
 					id=1247;
@@ -15162,7 +15177,7 @@ class Mission
 					{
 						init="call{this setVariable [""unit_loadout_role"",""lmgAss""];}";
 						name="op_1_10";
-						description="Alpha 2 - Light Machine Gunner Assistant";
+						description="A2 - Light Machine Gunner Assistant";
 						isPlayable=1;
 					};
 					id=1248;
@@ -15261,7 +15276,7 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="op_2_1";
-						description="Bravo 1 - Squad Leader";
+						description="B1 - Squad Leader@Bravo";
 						isPlayable=1;
 					};
 					id=1250;
@@ -15322,7 +15337,7 @@ class Mission
 					class Attributes
 					{
 						name="op_2_2";
-						description="Bravo 1 - Pointman";
+						description="B1 - Pointman";
 						isPlayable=1;
 					};
 					id=1251;
@@ -15383,7 +15398,7 @@ class Mission
 					class Attributes
 					{
 						name="op_2_3";
-						description="Bravo 1 - Rifleman (AT)";
+						description="B1 - Rifleman (AT)";
 						isPlayable=1;
 					};
 					id=1252;
@@ -15436,20 +15451,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7524,5.0014391,7568.0498};
-						angles[]={0,3.0830894,0};
+						position[]={7518,5.0014391,7566.0498};
+						angles[]={0,3.1415927,0};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						rank="CORPORAL";
-						name="op_2_6";
-						description="Bravo 2 - Team Leader";
+						name="op_2_4";
+						description="B1 - Marksman";
 						isPlayable=1;
 					};
-					id=1253;
-					type="O_Soldier_TL_F";
+					id=1256;
+					type="O_soldier_M_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15467,7 +15481,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male04ENG";
+									value="Male03ENG";
 								};
 							};
 						};
@@ -15486,7 +15500,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1;
+									value=1.02;
 								};
 							};
 						};
@@ -15498,19 +15512,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7522,5.0014391,7568.0498};
-						angles[]={0,3.0830894,0};
+						position[]={7516,5.0014391,7566.0498};
+						angles[]={0,3.1415927,0};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						name="op_2_7";
-						description="Bravo 2 - Paramedic";
+						name="op_2_5";
+						description="B1 - Grenadier";
 						isPlayable=1;
 					};
-					id=1254;
-					type="O_medic_F";
+					id=1258;
+					type="O_Soldier_GL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15559,19 +15573,20 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7520,5.0014391,7568.0498};
+						position[]={7524,5.0014391,7568.0498};
 						angles[]={0,3.0830894,0};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						name="op_2_8";
-						description="Bravo 2 - Rifleman (AT)";
+						rank="CORPORAL";
+						name="op_2_6";
+						description="B2 - Team Leader";
 						isPlayable=1;
 					};
-					id=1255;
-					type="O_Soldier_LAT_F";
+					id=1253;
+					type="O_Soldier_TL_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15620,19 +15635,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7518,5.0014391,7566.0498};
-						angles[]={0,3.1415927,0};
+						position[]={7522,5.0014391,7568.0498};
+						angles[]={0,3.0830894,0};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						name="op_2_4";
-						description="Bravo 1 - Marksman";
+						name="op_2_7";
+						description="B2 - Paramedic";
 						isPlayable=1;
 					};
-					id=1256;
-					type="O_soldier_M_F";
+					id=1254;
+					type="O_medic_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15650,7 +15665,7 @@ class Mission
 											"STRING"
 										};
 									};
-									value="Male03ENG";
+									value="Male04ENG";
 								};
 							};
 						};
@@ -15669,7 +15684,7 @@ class Mission
 											"SCALAR"
 										};
 									};
-									value=1.02;
+									value=1;
 								};
 							};
 						};
@@ -15681,19 +15696,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7518,5.0014391,7568.0498};
+						position[]={7520,5.0014391,7568.0498};
 						angles[]={0,3.0830894,0};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						name="op_2_9";
-						description="Bravo 2 - Light Machine Gunner";
+						name="op_2_8";
+						description="B2 - Rifleman (AT)";
 						isPlayable=1;
 					};
-					id=1257;
-					type="O_Soldier_AR_F";
+					id=1255;
+					type="O_Soldier_LAT_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15742,19 +15757,19 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={7516,5.0014391,7566.0498};
-						angles[]={0,3.1415927,0};
+						position[]={7518,5.0014391,7568.0498};
+						angles[]={0,3.0830894,0};
 					};
 					side="East";
 					flags=4;
 					class Attributes
 					{
-						name="op_2_5";
-						description="Bravo 1 - Grenadier";
+						name="op_2_9";
+						description="B2 - Light Machine Gunner";
 						isPlayable=1;
 					};
-					id=1258;
-					type="O_Soldier_GL_F";
+					id=1257;
+					type="O_Soldier_AR_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -15811,7 +15826,7 @@ class Mission
 					class Attributes
 					{
 						name="op_2_10";
-						description="Bravo 2 - Light Machine Gunner Assistant";
+						description="B2 - Light Machine Gunner Assistant";
 						isPlayable=1;
 					};
 					id=1259;
@@ -15910,7 +15925,7 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="op_3_1";
-						description="Charlie 1 - Squad Leader";
+						description="C1 - Squad Leader@Charlie";
 						isPlayable=1;
 					};
 					id=1261;
@@ -15971,7 +15986,7 @@ class Mission
 					class Attributes
 					{
 						name="op_3_2";
-						description="Charlie 1 - Pointman";
+						description="C1 - Pointman";
 						isPlayable=1;
 					};
 					id=1262;
@@ -16033,7 +16048,7 @@ class Mission
 					{
 						skill=0.49851751;
 						name="op_3_3";
-						description="Charlie 1 - Rifleman (AT)";
+						description="C1 - Rifleman (AT)";
 						isPlayable=1;
 					};
 					id=1263;
@@ -16094,7 +16109,7 @@ class Mission
 					class Attributes
 					{
 						name="op_3_4";
-						description="Charlie 1 - Anti-Tank Gunner";
+						description="C1 - Anti-Tank Gunner";
 						isPlayable=1;
 					};
 					id=1264;
@@ -16155,7 +16170,7 @@ class Mission
 					class Attributes
 					{
 						name="op_3_5";
-						description=" Charlie 1 - Anti-Tank Assistant";
+						description="C1 - Anti-Tank Assistant";
 						isPlayable=1;
 					};
 					id=1265;
@@ -16217,7 +16232,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="op_3_6";
-						description="Charlie 2 - Team Leader";
+						description="C2 - Team Leader";
 						isPlayable=1;
 					};
 					id=1266;
@@ -16278,7 +16293,7 @@ class Mission
 					class Attributes
 					{
 						name="op_3_7";
-						description="Charlie 2 - Paramedic";
+						description="C2 - Paramedic";
 						isPlayable=1;
 					};
 					id=1267;
@@ -16339,7 +16354,7 @@ class Mission
 					class Attributes
 					{
 						name="op_3_8";
-						description="Charlie 2 - Rifleman (AT)";
+						description="C2 - Rifleman (AT)";
 						isPlayable=1;
 					};
 					id=1268;
@@ -16400,7 +16415,7 @@ class Mission
 					class Attributes
 					{
 						name="op_3_9";
-						description="Charlie 2 - Light Machine Gunner";
+						description="C2 - Light Machine Gunner";
 						isPlayable=1;
 					};
 					id=1269;
@@ -16461,7 +16476,7 @@ class Mission
 					class Attributes
 					{
 						name="op_3_10";
-						description=" Charlie 2 - Light Machine Gunner Assistant";
+						description="C2 - Light Machine Gunner Assistant";
 						isPlayable=1;
 					};
 					id=1270;
@@ -16560,7 +16575,7 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="op_4_1";
-						description="Delta 1 - Recon Squad Leader";
+						description="D1 - Recon Squad Leader@Delta";
 						isPlayable=1;
 					};
 					id=1272;
@@ -16621,7 +16636,7 @@ class Mission
 					class Attributes
 					{
 						name="op_4_2";
-						description="Delta 1 - Recon Scout";
+						description="D1 - Recon Scout";
 						isPlayable=1;
 					};
 					id=1273;
@@ -16682,7 +16697,7 @@ class Mission
 					class Attributes
 					{
 						name="op_4_3";
-						description="Delta 1 - Recon Scout (AT)";
+						description="D1 - Recon Scout (AT)";
 						isPlayable=1;
 					};
 					id=1274;
@@ -16743,7 +16758,7 @@ class Mission
 					class Attributes
 					{
 						name="op_4_4";
-						description="Delta 1 - Recon Marksman";
+						description="D1 - Recon Marksman";
 						isPlayable=1;
 					};
 					id=1275;
@@ -16804,7 +16819,7 @@ class Mission
 					class Attributes
 					{
 						name="op_4_5";
-						description="Delta 1 - Recon Demo Specialist";
+						description="D1 - Recon Demo Specialist";
 						isPlayable=1;
 					};
 					id=1276;
@@ -16866,7 +16881,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="op_4_6";
-						description="Delta 2 - Recon Team Leader";
+						description="D2 - Recon Team Leader";
 						isPlayable=1;
 					};
 					id=1277;
@@ -16927,7 +16942,7 @@ class Mission
 					class Attributes
 					{
 						name="op_4_7";
-						description="Delta 2 - Recon Paramedic";
+						description="D2 - Recon Paramedic";
 						isPlayable=1;
 					};
 					id=1278;
@@ -16988,7 +17003,7 @@ class Mission
 					class Attributes
 					{
 						name="op_4_8";
-						description="Delta 2 - Recon Scout (AT)";
+						description="D2 - Recon Scout (AT)";
 						isPlayable=1;
 					};
 					id=1279;
@@ -17049,7 +17064,7 @@ class Mission
 					class Attributes
 					{
 						name="op_4_9";
-						description="Delta 2 - Recon Marksman";
+						description="D2 - Recon Marksman";
 						isPlayable=1;
 					};
 					id=1280;
@@ -17110,7 +17125,7 @@ class Mission
 					class Attributes
 					{
 						name="op_4_10";
-						description="Delta 2 - Recon Demo Specialist";
+						description="D2 - Recon Demo Specialist";
 						isPlayable=1;
 					};
 					id=1281;
@@ -17743,7 +17758,7 @@ class Mission
 					{
 						rank="SERGEANT";
 						name="op_10_1";
-						description="Yankee - Platoon Commander";
+						description="Platoon Commander@Yankee";
 						isPlayable=1;
 					};
 					id=1304;
@@ -17805,7 +17820,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="op_10_2";
-						description="Yankee - Platoon Medic";
+						description="Platoon Medic";
 						isPlayable=1;
 					};
 					id=1305;
@@ -17867,7 +17882,7 @@ class Mission
 					{
 						rank="CORPORAL";
 						name="op_10_3";
-						description="Yankee - Platoon FAC";
+						description="Platoon FAC";
 						isPlayable=1;
 					};
 					id=1306;
@@ -17965,7 +17980,7 @@ class Mission
 					class Attributes
 					{
 						name="op_11_1";
-						description="Anvil (MSE-3 Marid) - Commander";
+						description="(MSE-3 Marid) - Commander@Anvil";
 						isPlayable=1;
 					};
 					id=1308;
@@ -18026,7 +18041,7 @@ class Mission
 					class Attributes
 					{
 						name="op_11_2";
-						description="Anvil (MSE-3 Marid) - Gunner";
+						description="(MSE-3 Marid) - Gunner";
 						isPlayable=1;
 					};
 					id=1309;
@@ -18087,7 +18102,7 @@ class Mission
 					class Attributes
 					{
 						name="op_11_3";
-						description="Anvil (MSE-3 Marid) - Driver";
+						description="(MSE-3 Marid) - Driver";
 						isPlayable=1;
 					};
 					id=1310;
@@ -18158,7 +18173,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Anvil (APC)";
+							value="(APC)";
 						};
 					};
 				};
@@ -18185,7 +18200,7 @@ class Mission
 					class Attributes
 					{
 						name="op_12_1";
-						description="Berserker (BTR-K Kamysh) - Commander";
+						description="(BTR-K Kamysh) - Commander@Berserker";
 						isPlayable=1;
 					};
 					id=1312;
@@ -18246,7 +18261,7 @@ class Mission
 					class Attributes
 					{
 						name="op_12_2";
-						description="Berserker (BTR-K Kamysh) - Gunner";
+						description="(BTR-K Kamysh) - Gunner";
 						isPlayable=1;
 					};
 					id=1313;
@@ -18307,7 +18322,7 @@ class Mission
 					class Attributes
 					{
 						name="op_12_3";
-						description="Berserker (BTR-K Kamysh) - Driver";
+						description="(BTR-K Kamysh) - Driver";
 						isPlayable=1;
 					};
 					id=1314;
@@ -18378,7 +18393,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Berserker (IFV)";
+							value="(IFV)";
 						};
 					};
 				};
@@ -18446,7 +18461,7 @@ class Mission
 					class Attributes
 					{
 						name="op_13_1";
-						description="Coyote (T100) - Commander";
+						description="(T100) - Commander@Coyote";
 						isPlayable=1;
 					};
 					id=1317;
@@ -18507,7 +18522,7 @@ class Mission
 					class Attributes
 					{
 						name="op_13_2";
-						description="Coyote (T100) - Gunner";
+						description="(T100) - Gunner";
 						isPlayable=1;
 					};
 					id=1318;
@@ -18568,7 +18583,7 @@ class Mission
 					class Attributes
 					{
 						name="op_13_3";
-						description="Coyote (T100) - Driver";
+						description="(T100) - Driver";
 						isPlayable=1;
 					};
 					id=1319;
@@ -18639,7 +18654,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Coyote (TANK)";
+							value="(TANK)";
 						};
 					};
 				};
@@ -18748,7 +18763,7 @@ class Mission
 					class Attributes
 					{
 						name="op_14_1";
-						description="Doomsday (ZSU-39) - Commander";
+						description="(ZSU-39) - Commander@Doomsday";
 						isPlayable=1;
 					};
 					id=1323;
@@ -18809,7 +18824,7 @@ class Mission
 					class Attributes
 					{
 						name="op_14_2";
-						description="Doomsday (ZSU-39) - Gunner";
+						description="(ZSU-39) - Gunner";
 						isPlayable=1;
 					};
 					id=1324;
@@ -18870,7 +18885,7 @@ class Mission
 					class Attributes
 					{
 						name="op_14_3";
-						description="Doomsday (ZSU-39) - Driver";
+						description="(ZSU-39) - Driver";
 						isPlayable=1;
 					};
 					id=1325;
@@ -18941,7 +18956,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Doomsday (AA)";
+							value="(AA)";
 						};
 					};
 				};
@@ -18968,7 +18983,7 @@ class Mission
 					class Attributes
 					{
 						name="op_15_1";
-						description="Excalibur (2S9) - Commander";
+						description="(2S9) - Commander@Excalibur";
 						isPlayable=1;
 					};
 					id=1327;
@@ -19029,7 +19044,7 @@ class Mission
 					class Attributes
 					{
 						name="op_15_2";
-						description="Excalibur (2S9) - Gunner";
+						description="(2S9) - Gunner";
 						isPlayable=1;
 					};
 					id=1328;
@@ -19090,7 +19105,7 @@ class Mission
 					class Attributes
 					{
 						name="op_15_3";
-						description="Excalibur (2S9) - Driver";
+						description="(2S9) - Driver";
 						isPlayable=1;
 					};
 					id=1329;
@@ -19161,7 +19176,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Excalibur (Artillery)";
+							value="(Artillery)";
 						};
 					};
 				};
@@ -19380,7 +19395,7 @@ class Mission
 					class Attributes
 					{
 						name="op_21_1";
-						description="Falcon (MI-48) - Pilot";
+						description="(MI-48) - Pilot@Falcon";
 						isPlayable=1;
 					};
 					id=1354;
@@ -19441,7 +19456,7 @@ class Mission
 					class Attributes
 					{
 						name="op_21_2";
-						description="Falcon (MI-48) - Co-Pilot";
+						description="(MI-48) - Co-Pilot";
 						isPlayable=1;
 					};
 					id=1355;
@@ -19512,7 +19527,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Falcon (Attack Heli)";
+							value="(Attack Heli)";
 						};
 					};
 				};
@@ -19539,7 +19554,7 @@ class Mission
 					class Attributes
 					{
 						name="op_22_1";
-						description="Goliath (ka-60) - Pilot";
+						description="(ka-60) - Pilot@Goliath";
 						isPlayable=1;
 					};
 					id=1357;
@@ -19600,7 +19615,7 @@ class Mission
 					class Attributes
 					{
 						name="op_22_2";
-						description="Goliath (ka-60) - Co-Pilot";
+						description="(ka-60) - Co-Pilot";
 						isPlayable=1;
 					};
 					id=1358;
@@ -19671,7 +19686,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Goliath (Transport Heli)";
+							value="(Transport Heli)";
 						};
 					};
 				};
@@ -19738,7 +19753,7 @@ class Mission
 					class Attributes
 					{
 						name="op_23_1";
-						description="Hornet (Yak-130) - Pilot";
+						description="(Yak-130) - Pilot@Hornet";
 						isPlayable=1;
 					};
 					id=1361;
@@ -19809,7 +19824,7 @@ class Mission
 									"STRING"
 								};
 							};
-							value="Hornet (Jet)";
+							value="(Jet)";
 						};
 					};
 				};
@@ -19912,7 +19927,7 @@ class Mission
 					class Attributes
 					{
 						name="op_31_1";
-						description="Ingot - Senior Engineer";
+						description="Senior Engineer@Ingot";
 						isPlayable=1;
 					};
 					id=1367;
@@ -19973,7 +19988,7 @@ class Mission
 					class Attributes
 					{
 						name="op_31_2";
-						description="Ingot - Demoman";
+						description="Demoman";
 						isPlayable=1;
 					};
 					id=1368;
@@ -20034,7 +20049,7 @@ class Mission
 					class Attributes
 					{
 						name="op_31_3";
-						description="Ingot - Engineer";
+						description="Engineer";
 						isPlayable=1;
 					};
 					id=1369;
@@ -20132,7 +20147,7 @@ class Mission
 					class Attributes
 					{
 						name="op_32_1";
-						description="Jackhammer - Squad leader";
+						description="Squad leader@Jackhammer";
 						isPlayable=1;
 					};
 					id=1371;
@@ -20193,7 +20208,7 @@ class Mission
 					class Attributes
 					{
 						name="op_32_2";
-						description="Jackhammer - Mortar Gunner";
+						description="Mortar Gunner";
 						isPlayable=1;
 					};
 					id=1372;
@@ -20254,7 +20269,7 @@ class Mission
 					class Attributes
 					{
 						name="op_32_3";
-						description="Jackhammer - Mortar Assistant";
+						description="Mortar Assistant";
 						isPlayable=1;
 					};
 					id=1373;
@@ -20376,7 +20391,7 @@ class Mission
 					class Attributes
 					{
 						name="op_33_2";
-						description="Kingslayer - Sniper";
+						description="Sniper";
 						isPlayable=1;
 					};
 					id=1377;
@@ -20437,7 +20452,7 @@ class Mission
 					class Attributes
 					{
 						name="op_33_1";
-						description="Kingslayer - Spotter";
+						description="Spotter@Kingslayer";
 						isPlayable=1;
 					};
 					id=1378;
@@ -20548,7 +20563,7 @@ class Mission
 					{
 						init="call{this setVariable [""unit_loadout_role"",""custom1""];}";
 						name="op_34_1";
-						description="Lucifer - Medic Leader";
+						description="Medic Leader@Lucifer";
 						isPlayable=1;
 					};
 					id=1381;
@@ -20609,7 +20624,7 @@ class Mission
 					class Attributes
 					{
 						name="op_34_2";
-						description="Lucifer - Medic";
+						description="Medic";
 						isPlayable=1;
 					};
 					id=1382;
@@ -20670,7 +20685,7 @@ class Mission
 					class Attributes
 					{
 						name="op_34_3";
-						description="Lucifer - Assistant Medic";
+						description="Assistant Medic";
 						isPlayable=1;
 					};
 					id=1383;

@@ -30,51 +30,63 @@ if !(_enabled) exitWith {};
 
 //ACE 3 Revive Settings ========================================================
 
-["ace_medical_enableRevive", ACE3_SETTINGS_REVIVE_ENABLE, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_maxReviveTime", ACE3_SETTINGS_REVIVE_TIME, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_amountOfReviveLives", ACE3_SETTINGS_REVIVE_LIVES, true, _source, false] call CBA_settings_fnc_set;
+//["ace_medical_enableRevive", ACE3_SETTINGS_REVIVE_ENABLE, true, _source, false] call CBA_settings_fnc_set;
+//["ace_medical_maxReviveTime", ACE3_SETTINGS_REVIVE_TIME, true, _source, false] call CBA_settings_fnc_set;
+//["ace_medical_amountOfReviveLives", ACE3_SETTINGS_REVIVE_LIVES, true, _source, false] call CBA_settings_fnc_set;
 
 //ACE 3 Medical ================================================================
 
-["ace_medical_level", (missionNamespace getVariable ["mission_ace3_med_level",ACE3_PARAM_MED_LEVEL]), true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_medicSetting", (missionNamespace getVariable ["mission_ace3_med_level",ACE3_PARAM_MED_LEVEL]), true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_increaseTrainingInLocations", true, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_allowLitterCreation", true, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_litterCleanUpDelay", 300, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_enableScreams", true, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_playerDamageThreshold", (missionNamespace getVariable ["mission_ace3_med_player_health",ACE3_PARAM_MED_PLAYER_HEALTH]), true, _source, false] call CBA_settings_fnc_set;
-
 ["ace_medical_AIDamageThreshold", ACE3_SETTINGS_AI_HEALTH, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_enableUnconsciousnessAI", ACE3_SETTINGS_AI_UNCON, true, _source, false] call CBA_settings_fnc_set;
-
-// uses ! because setting is prevent insta death and param is enable instadeath
-
-["ace_medical_preventInstaDeath", !(missionNamespace getVariable ["mission_ace3_med_instadeath",ACE3_PARAM_MED_INSTADEATH]), true, _source, false] call CBA_settings_fnc_set;
-
 ["ace_medical_bleedingcoefficient", ACE3_SETTINGS_MED_BLEED, true, _source, false] call CBA_settings_fnc_set;
-
+["ace_medical_blood_bloodLifetime", ACE3_SETTINGS_MED_BLEED, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_blood_enabledFor", ACE3_SETTINGS_MED_BLEED, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_blood_maxBloodObjects", ACE3_SETTINGS_MED_BLEED, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_fatalDamageSource", 0, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_fractureChance", 0.4, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_fractures", 0, true, _source, false] call CBA_settings_fnc_set;
+//["ace_medical_gui_enableMedicalMenu", 1, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_ivFlowRate", 10, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_limping", 1, true, _source, false] call CBA_settings_fnc_set;
 ["ace_medical_painCoefficient", ACE3_SETTINGS_MED_PAIN, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_playerDamageThreshold", (missionNamespace getVariable ["mission_ace3_med_player_health",ACE3_PARAM_MED_PLAYER_HEALTH]), true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_spontaneousWakeUpChance", 0.75, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_spontaneousWakeUpEpinephrineBoost", 15, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_statemachine_AIUnconsciousness", false, true, _source, false] call CBA_settings_fnc_set;
 
-["ace_medical_keepLocalSettingsSynced", true, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_statemachine_cardiacArrestTime", 0, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_statemachine_fatalInjuriesAI", 0, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_statemachine_fatalInjuriesPlayer", 0, true, _source, false] call CBA_settings_fnc_set;
 
-//ACE 3 Advanced Medical =======================================================
+["ace_medical_treatment_advancedBandages", ACE3_SETTINGS_ADV_WOUNDS, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_advancedDiagnose", true, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_advancedMedication", false, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_allowLitterCreation", true, true, _source, false] call CBA_settings_fnc_set;
 
-["ace_medical_enableFor", 1, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_enableadvancedwounds", ACE3_SETTINGS_ADV_WOUNDS, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_enableVehicleCrashes", true, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_allowSelfIV", 1, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_allowSelfPAK", 1, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_allowSelfStitch", 1, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_allowSharedEquipment", 1, true, _source, false] call CBA_settings_fnc_set;
 
-["ace_medical_medicSetting_PAK", 1, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_consumeItem_PAK", ACE3_SETTINGS_ADV_PAK_CONSUME, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_useLocation_PAK", 0, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_useCondition_PAK", 0, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_clearTraumaAfterBandage", false, true, _source, false] call CBA_settings_fnc_set;//ACE3_SETTINGS_ADV_HITPOINTS
+["ace_medical_treatment_consumePAK", ACE3_SETTINGS_ADV_PAK_CONSUME, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_consumeSurgicalKit", 0, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_convertItems", 1, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_cprSuccessChance", 0.75, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_holsterRequired", 0, true, _source, false] call CBA_settings_fnc_set;
 
-["ace_medical_medicSetting_SurgicalKit", 1, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_consumeItem_SurgicalKit", 0, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_useLocation_SurgicalKit", 0, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_useCondition_SurgicalKit", 0, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_litterCleanupDelay", 0, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_locationEpinephrine", 0, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_locationPAK", 0, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_locationsBoostTraining", true, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_locationSurgicalKit", 0, true, _source, false] call CBA_settings_fnc_set;
 
-["ace_medical_healHitPointAfterAdvBandage", ACE3_SETTINGS_ADV_HITPOINTS, true, _source, false] call CBA_settings_fnc_set;
-["ace_medical_painIsOnlySuppressed", false, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_maxLitterObjects", 300, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_medicEpinephrine", 0, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_medicIV", 0, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_medicPAK", 1, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_medicSurgicalKit", 1, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_timeCoefficientPAK", 1, true, _source, false] call CBA_settings_fnc_set;
+["ace_medical_treatment_woundReopenChance", 1, true, _source, false] call CBA_settings_fnc_set;
 
 //ACE 3 Captives ===============================================================
 
@@ -84,10 +96,16 @@ if !(_enabled) exitWith {};
 
 //ACE 3 Varius other settigns ==================================================
 
+// hearing
+["ace_hearing_enableCombatDeafness", false, true, _source, false] call CBA_settings_fnc_set;
+["ace_hearing_disableEarRinging", true, true, _source, false] call CBA_settings_fnc_set;
+["ace_hearing_earplugsVolume", 0.5, true, _source, false] call CBA_settings_fnc_set;
+
 // fatiuge
 ["ace_advanced_fatigue_enabled", false, true, _source, false] call CBA_settings_fnc_set;
 ["ace_advanced_fatigue_performanceFactor", 2, true, _source, false] call CBA_settings_fnc_set;
 ["ace_advanced_fatigue_recoveryFactor", 5, true, _source, false] call CBA_settings_fnc_set;
+["ace_advanced_fatigue_swayFactor", 5, true, _source, false] call CBA_settings_fnc_set;
 ["ace_advanced_fatigue_loadFactor", 0.75, true, _source, false] call CBA_settings_fnc_set;
 ["ace_advanced_fatigue_terrainGradientFactor", 1, true, _source, false] call CBA_settings_fnc_set;
 
@@ -123,9 +141,10 @@ if !(_enabled) exitWith {};
 ["ace_advanced_ballistics_ammoTemperatureEnabled", true, true, _source, false] call CBA_settings_fnc_set;
 ["ace_advanced_ballistics_barrelLengthInfluenceEnabled", true, true, _source, false] call CBA_settings_fnc_set;
 ["ace_advanced_ballistics_bulletTraceEnabled", true, true, _source, false] call CBA_settings_fnc_set;
+["ace_advanced_ballistics_muzzleVelocityVariationEnabled", true, true, _source, false] call CBA_settings_fnc_set;
 
 ["ace_finger_enabled", true, true, _source, false] call CBA_settings_fnc_set;
-["ace_finger_maxRange", 5, true, _source, false] call CBA_settings_fnc_set;
+["ace_finger_maxRange", 7, true, _source, false] call CBA_settings_fnc_set;
 ["ace_explosives_requireSpecialist", false, true, _source, false] call CBA_settings_fnc_set;
 ["ace_explosives_punishNonSpecialists", true, true, _source, false] call CBA_settings_fnc_set;
 

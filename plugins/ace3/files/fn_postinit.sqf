@@ -47,7 +47,7 @@ easywayout_canSuicide = ACE3_CUSTOM_SUICIDE;
 
 
 if (hasInterface) then {
-    player setVariable ["ace_medical_amountOfReviveLives",ace_medical_amountOfReviveLives,true];
+    //player setVariable ["ace_medical_amountOfReviveLives",ace_medical_amountOfReviveLives,true];
 };
 
 //ACE 3 Medical ================================================================
@@ -55,11 +55,11 @@ if (hasInterface) then {
 
 if (hasInterface) then {
 	private _dmg = (missionNamespace getVariable ["mission_ace3_med_player_health",ACE3_PARAM_MED_PLAYER_HEALTH]);
-    player setVariable ["ace_medical_unitDamageThreshold",[_dmg,(_dmg*1.3),(_dmg*2)],true];
+    player setVariable ["ace_medical_damageThreshold",_dmg,true];
 };
 
 if (hasInterface) then {
-    player setVariable ["ace_medical_preventInstaDeath",!(missionNamespace getVariable ["mission_ace3_med_instadeath",ACE3_PARAM_MED_INSTADEATH]),true];
+    //player setVariable ["ace_medical_preventInstaDeath",!(missionNamespace getVariable ["mission_ace3_med_instadeath",ACE3_PARAM_MED_INSTADEATH]),true];
 };
 
 if (hasInterface) then {
@@ -79,10 +79,12 @@ if (hasInterface) then {
         player setvariable ["ACE_medical_medicClass", 1, true];
     };
 
+    /*
     if (ACE3_SETTINGS_LEGSFIX) then {
         fix_legs = ["leg_fix","<t color='#ff0000'>Apply splint to broken leg</t>","",{[20, [], {player setHitPointDamage ["HitLegs", 0];player playAction "medicStop";}, {player playAction "medicStop";}, "Fixing Legs"] call ace_common_fnc_progressBar;player playAction "medicStart";},{(player getHitPointDamage "HitLegs") >= 0.5}] call ace_interact_menu_fnc_createAction;
         [typeOf player, 1, ["ACE_SelfActions"], fix_legs] call ace_interact_menu_fnc_addActionToClass;
     };
+    */
 };
 
 // at this point the server is done

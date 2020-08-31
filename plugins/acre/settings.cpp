@@ -130,8 +130,8 @@
 #define ACRE_SETTING_MOVE true
 // ----------------------------------------------------------------------------
 // Channel to move to in ts3
-#define ACRE_SETTING_CHANNEL "ACRE"		// channel name
-#define ACRE_SETTING_TSPW ""			// password
+#define ACRE_SETTING_CHANNEL "ACRE2"		// channel name
+#define ACRE_SETTING_TSPW "123"			// password
 // ----------------------------------------------------------------------------
 // Enable radio interference ?
 #define ACRE_SETTING_INTERFERENCE false
